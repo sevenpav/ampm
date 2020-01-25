@@ -1,0 +1,15 @@
+mixin checkbox({ label, isChecked }, mixes)
+
+  .checkbox(class=(mixes) && `${mixes}__checkbox` class=(isChecked) && 'checkbox--checked')
+      
+    label.checkbox__label
+      span.checkbox__custom
+        img.checkbox__icon-check(src=require('views/components/checkbox/img/icon-check.svg') alt='Иконка')
+      input.checkbox__input(type='checkbox' checked=(isChecked))
+      if (label)
+        span.checkbox__label-text= label
+
+    
+
+
+

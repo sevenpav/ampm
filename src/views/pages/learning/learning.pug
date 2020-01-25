@@ -1,0 +1,38 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const { instructionsContent, courseItems } = require('./data.js')
+
+  #learning-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'learning-pg')
+
+    .learning-pg__container
+      .learning-pg__step._intro
+        +page-title({ title: 'Обучение', type: 'line' })
+
+        p.learning-pg__greeting Добрый день!
+
+        .content-display
+          p.text Перед тобой - программа обучения по продажам от самого экстраординарного бренда в отрасли – АМ.РМ. В этом разделе мы собрали масштабный опыт продвижения сантехники от нашей команды, и сегодня мы рады поделиться этими знаниями.
+          br
+          p.text Пройдя этот курс, ты:
+          br
+          ul.text-list
+            li Откроешь секрет успешных продаж – на эту тему мы сняли целый мини-сериал с узнаваемым актером современности!
+            li Познакомишься с типологией покупателей и с эффективными стратегиями коммуникации с каждым из них. Это поможет продавать больше и легче!
+            li Узнаешь интересные факты и фишки продуктов АМ.РМ в пяти товарных категориях
+
+        +slide-btn({ label: 'Готов ознакомиться с инструкцией?', title: 'Инструкция', content: instructionsContent }, 'learning-pg')
+
+        +btn-normal({ label: 'Начать обучение', type: 'gray', link: '#course-list' }, 'learning-pg')
+
+      .learning-pg__step._course-list
+        +page-title({ title: 'Список курсов' })
+
+        .learning-pg__course-list
+          each course in courseItems
+            +category-item({ name: course.name, img: course.img, href: course.href }, 'learning-pg')

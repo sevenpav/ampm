@@ -1,0 +1,42 @@
+mixin bonus-tabs(mixes)
+
+  - const { tabs, tags, categoryItems, writeOffTable, enrollmentTable } = require('views/components/bonus-tabs/data.js')
+
+  .bonus-tabs(class=(mixes) && `${mixes}__bonus-tabs`)
+    header.bonus-tabs__header
+      .bonus-tabs__tab-switch
+        each tab, idx in tabs
+          button.bonus-tabs__tab-btn(class=(idx === 0) && 'bonus-tabs__tab-btn--active' data-target=`${tab}`)= tab
+      .bonus-tabs__bonus-display
+        p.bonus-tabs__bonus-display-label Доступно бонусов
+        .bonus-tabs__bonus-display-num
+          img.bonus-tabs__icon-gift(src=require('views/components/bonus-tabs/img/icon-gift.svg') alt='Иконка')
+          = 2846
+      
+    .bonus-tabs__container
+      .bonus-tabs__tab.bonus-tabs__tab--show(data-target='Акции')
+        img.bonus-tabs__icon-sale(src=require('views/components/bonus-tabs/img/icon-sale.svg') alt='Иконка')
+        p.bonus-tabs__msg В данный момент нет активный акций
+
+      .bonus-tabs__tab(data-target='Магазин')
+        +tags({ tags }, 'bonus-tabs')
+
+        .bonus-tabs__category-list
+          each item in categoryItems
+            +category-bonus-item({ img: item.img, name: item.name }, 'bonus-tabs')
+
+
+      .bonus-tabs__tab(data-target='История')
+
+        .bonus-tabs__sub-tab-switch
+          .bonus-tabs__sub-tab-switch-flex-wrap
+            each tab, idx in ['Списание', 'Зачисление']
+              button.bonus-tabs__sub-tab-btn(class=(idx === 0) && 'bonus-tabs__sub-tab-btn--active' data-target=`${tab}`)= tab
+
+        .bonus-tabs__sub-tab.bonus-tabs__sub-tab--show(data-target='Списание')
+          +table(writeOffTable)
+
+        .bonus-tabs__sub-tab(data-target='Зачисление')
+          +table(enrollmentTable)
+       
+

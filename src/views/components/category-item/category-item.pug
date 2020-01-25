@@ -1,0 +1,9 @@
+mixin category-item({ name, img, href }, mixes)
+
+  a.category-item(class=(mixes) && `${mixes}__category-item` href=`${href}`)
+    .category-item__img-container
+      img.category-item__img(src=`${img}`)
+
+    footer.category-item__footer
+      p.category-item__name= name
+

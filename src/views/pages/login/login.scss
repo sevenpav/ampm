@@ -1,0 +1,24 @@
+#login-pg {
+  @include flex-center;
+  min-height: 100vh;
+}
+
+// Mixes
+
+#login-pg {
+  .login-pg__login-form {
+    width: 100%;
+    max-width: 344px;
+  }
+
+  .login-pg__recover-form {
+    display: none;
+    max-width: 344px;
+  }
+
+  .login-pg__registration-form {
+    display: none;
+    width: 100%;
+    max-width: 344px;
+  }
+}

@@ -1,0 +1,44 @@
+.modal-cart {
+  width: 100%;
+  max-width: 755px;
+}
+
+.modal-cart__list {
+  margin-top: 65px;
+  margin-bottom: 50px;
+}
+
+.modal-cart__footer-btn-group {
+  display: flex;
+  justify-content: center;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.modal-cart__btn-normal {
+  &:not(:last-child) {
+    margin-right: 33px;
+  }
+}
+
+.modal-cart__cart-item {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+// Animation

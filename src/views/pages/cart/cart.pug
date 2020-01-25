@@ -1,0 +1,30 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const { productList } = require('./data.js')
+  - const isEmpty = false
+
+  #cart-pg
+    +modal-upload('cart-pg')
+
+    header.cart-pg__header
+      +page-title({ title: 'Корзина' }, 'cart-pg')
+      +btn-unpload('cart-pg')
+
+    if (isEmpty)
+      .cart-pg__empty-cart
+        img.cart-pg__empty-cart-icon(src=require('./img/icon-cart.svg') alt='Иконка')
+        | Корзина пуста
+
+      .cart-pg__product-list-container
+        p.cart-pg__product-list-subtitle Выберите товар дня по лучшей цене
+
+        +product-list({ items: productList }, 'cart-pg')
+
+    else
+      +cart-app('cart-pg')
+

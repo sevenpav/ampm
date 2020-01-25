@@ -1,0 +1,11 @@
+mixin select({ label, items }, mixes)
+
+  .select(class=(mixes) && `${mixes}__select`)
+    p.select__label= label
+    .select__wrap
+      select.select__self
+        each item in items
+          option.select__option= item
+
+      img.select__icon(src=require('views/components/select/img/icon-arrow.svg') alt='Иконка')
+

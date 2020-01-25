@@ -1,0 +1,7 @@
+mixin btn-normal({ label, type, link, otherClass, target }, mixes)
+
+  if (link)
+    a.btn-normal(href=`${link}` class=(mixes) && `${mixes}__btn-normal` class=(type) && `btn-normal--${type}` class=(otherClass) && `${otherClass}`)= label
+  else
+    button.btn-normal(class=(mixes) && `${mixes}__btn-normal` class=(type) && `btn-normal--${type}` class=(otherClass) && `${otherClass}` data-target=(target) && `${target}`)= label
+

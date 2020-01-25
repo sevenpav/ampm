@@ -1,0 +1,65 @@
+mixin test-app({ result }, ixes)
+
+  .test-app(class=(mixes) && `${mixes}__test-app`)
+
+    if (result)
+      .modal.modal--show.test-app__modal
+        header.modal__header
+          .modal__title-group
+            img.modal__header-icon(src=require('views/components/test-app/img/modal-icon.svg') alt='Иконка')
+            p.modal__title Тестирование закончено
+
+          +btn-close({}, 'modal')
+
+        .test-app__modal-body
+          p.test-app__modal-text Первый блин комом - ну, ничего.
+          br
+          p.test-app__modal-text Попробуй еще раз.
+
+    header.test-app__header
+      ul.test-app__control
+        each item, idx in ['correct', 'wrong', 'correct', 'correct', '', '', '', '', '']
+          li.test-app__control-item(class=(idx === 4) && 'test-app__control-item--active')= idx+1
+            if (item === 'correct')
+              img.test-app__control-icon(src=require('views/components/test-app/img/correct-icon.svg') alt='Иконка')
+            else if (item === 'wrong')
+              img.test-app__control-icon(src=require('views/components/test-app/img/wrong-icon.svg') alt='Иконка')
+      
+    .test-app__body
+
+      if (!result)
+        p.test-app__title Вопрос <span>5</span> из 10
+        
+        .content-display
+          p.text-subtitle Сколько наград получил бренд AM.PM за последние 9 лет?
+          br
+          p.text Выберите ответ:
+          br
+          .test-app__options
+            each value in ['47', '66', '59']
+              +radio-btn({ label: value }, 'test-app')
+
+      else
+        p.test-app__title.test-app__title--wrong Тест не сдан
+        
+        .content-display
+          table.test-app__table
+            tr
+              td Количество вопросов
+              td 10
+            tr
+              td Количество правильных ответов
+              td 6
+            tr
+              td.bold Выполнение теста завершено.
+              td
+            
+
+    if (!result)
+      footer.test-app__footer
+        +btn-normal({ label: 'Далее', type: 'gray' }, 'test-app')
+
+        +btn-normal({ label: 'Закончить', type: 'outline', link: 'test-result.html' }, 'test-app')
+
+    else
+      +btn-normal({ label: 'Результаты тестирования', type: 'outline', link: 'course.html#result' }, 'test-app')

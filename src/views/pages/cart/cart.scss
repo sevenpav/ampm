@@ -1,0 +1,46 @@
+#cart-pg {
+}
+
+.cart-pg__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.cart-pg__empty-cart {
+  display: flex;
+  flex-direction: column;
+  margin: 56px 0 122px;
+  color: #000;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+  text-align: center;
+}
+
+.cart-pg__empty-cart-icon {
+  margin-bottom: 12px;
+  transform: translateX(-8px);
+}
+
+.cart-pg__product-list-subtitle {
+  margin-bottom: 40px;
+  color: #515159;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+// Mixes
+
+.cart-pg__product-list {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.cart-pg__cart-app {
+  margin-top: 14px;
+}

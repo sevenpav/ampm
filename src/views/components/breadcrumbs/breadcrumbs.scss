@@ -1,0 +1,42 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.breadcrumbs__item {
+  &:last-child {
+    .breadcrumbs__link {
+      color: #8a8c9b;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  color: #515159;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.4px;
+}
+
+.breadcrumbs__icon {
+  margin: 0 10px;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

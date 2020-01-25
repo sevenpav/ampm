@@ -1,0 +1,79 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.login-form__title {
+  margin-bottom: 44px;
+  color: #000;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+}
+
+.login-pg__recover-password-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  color: #000;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.login-from__registration {
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+}
+
+.login-from__registration-label {
+  margin-bottom: 8px;
+  color: #515159;
+}
+
+.login-pg__registration-link {
+  color: #000;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.login-form__input-text {
+  margin-bottom: 24px;
+}
+
+.login-form__input-password {
+  margin-bottom: 42px;
+}
+
+.login-form__btn-normal {
+  align-self: center;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 32px;
+}
+
+// Animation

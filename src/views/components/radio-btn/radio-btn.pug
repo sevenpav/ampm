@@ -1,0 +1,7 @@
+mixin radio-btn({ label, name, isChecked }, mixes)
+
+  .radio-btn(class=(mixes) && `${mixes}__radio-btn` class=(isChecked) && 'radio-btn--checked')
+    label.radio-btn__label
+      span.radio-btn__custom
+      input.radio-btn__input(type='radio' name=`${name}` checked=(isChecked))
+      span.radio-btn__label-text= label

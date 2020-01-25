@@ -1,0 +1,16 @@
+mixin login-form({ hash }, mixes)
+
+  form.login-form(class=`_${hash}` class=(mixes) && `${mixes}__login-form`)
+
+    h1.login-form__title Авторизация
+
+    +input-text({ placeholder: 'e-mail' }, 'login-form')
+    +input-password('login-form')
+
+    +btn-normal({ label: 'Войти', type: 'gray' }, 'login-form')
+
+    a.login-pg__recover-password-link(href='#recover') Забыли пароль?
+
+    .login-from__registration
+      p.login-from__registration-label Нет аккаунта?
+      a.login-pg__registration-link(href='#registration') Зарегистрироваться

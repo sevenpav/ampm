@@ -1,0 +1,10 @@
+mixin category-bonus-item({ img, name }, mixes)
+
+  .category-bonus-item(class=(mixes) && `${mixes}__category-bonus-item`)
+    .category-bonus-item__img-container
+      img.category-bonus-item__img(src=`${img}`)
+
+    footer.category-bonus-item__footer
+      p.category-bonus-item__name= name
+      +btn-normal({ label: 'Выбрать', type: 'gray' }, 'category-bonus-item')
+

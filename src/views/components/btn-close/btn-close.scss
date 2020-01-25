@@ -1,0 +1,28 @@
+.btn-close {
+  padding: 8px;
+  cursor: pointer;
+  @include flex-center;
+
+  &--round {
+    border: 1px solid #000;
+    border-radius: 50%;
+  }
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

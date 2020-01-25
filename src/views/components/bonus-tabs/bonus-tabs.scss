@@ -1,0 +1,167 @@
+.bonus-tabs {
+}
+
+.bonus-tabs__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.bonus-tabs__tab-switch,
+.bonus-tabs__sub-tab-switch-flex-wrap {
+  display: flex;
+  background: #fff;
+  border-radius: 22px;
+}
+
+.bonus-tabs__tab-btn {
+  padding: 16px;
+  color: #000;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  border-radius: 22px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &--active {
+    color: #fff;
+    background: #515159;
+  }
+}
+
+.bonus-tabs__tab {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+
+  &[data-target='Акции'] {
+    margin-top: 40px;
+    text-align: center;
+
+    .bonus-tabs__icon-sale {
+      margin-bottom: 22px;
+    }
+
+    .bonus-tabs__msg {
+      text-align: center;
+    }
+  }
+
+  &[data-target='Магазин'] {
+    border-top: 1px solid #e1e5ef;
+  }
+
+  &[data-target='История'] {
+    padding-top: 23px;
+    border-top: 1px solid #e1e5ef;
+  }
+}
+
+.bonus-tabs__sub-tab-switch {
+  display: flex;
+  margin-bottom: 23px;
+}
+
+.bonus-tabs__sub-tab-switch-flex-wrap {
+  align-self: flex-start;
+}
+
+.bonus-tabs__sub-tab-btn {
+  padding: 8px 16px;
+  color: #000;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  border-radius: 22px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &--active {
+    color: #fff;
+    background: #515159;
+  }
+}
+
+.bonus-tabs__sub-tab {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+}
+
+.bonus-tabs__bonus-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 335px;
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 22px;
+}
+
+.bonus-tabs__bonus-display-label {
+  margin-right: 40px;
+  color: #000;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.bonus-tabs__bonus-display-num {
+  display: flex;
+  align-items: center;
+  padding: 7px 0;
+  color: #000;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.bonus-tabs__icon-gift {
+  margin-right: 10px;
+}
+
+.bonus-tabs__msg {
+  color: #000;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.bonus-tabs__category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -45px;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.bonus-tabs__category-bonus-item {
+  max-width: 350px;
+  margin-bottom: 45px;
+}
+
+// Animation

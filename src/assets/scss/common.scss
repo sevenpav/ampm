@@ -1,0 +1,68 @@
+@import '~normalize.css/normalize.css';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'reset';
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'TondoCorp', sans-serif;
+  background: $bg-color;
+}
+
+.container {
+  @include container;
+  min-height: 100%;
+}
+
+.dark-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: #000, $alpha: 0.5);
+  cursor: pointer;
+
+  &--show {
+    z-index: 10001;
+    display: block;
+  }
+}
+
+.content-display {
+  padding: 16px 16px 22px;
+  color: #515159;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.text-list {
+  padding-left: 18px;
+  list-style: disc;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.text-num-list {
+  padding-left: 18px;
+}
+
+.text-subtitle {
+  color: #000;
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: 700;
+}

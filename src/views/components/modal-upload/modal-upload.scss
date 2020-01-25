@@ -1,0 +1,65 @@
+.modal-upload {
+  width: 100%;
+  max-width: 369px;
+}
+
+.modal-upload__body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.modal-upload__form-group {
+  &:not(:last-of-type) {
+    margin-bottom: 46px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 76px;
+  }
+}
+
+.modal-upload__form-group-name {
+  margin-bottom: 13px;
+  color: #515159;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.1px;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.modal-upload__btn-normal {
+  align-self: center;
+  width: 100%;
+  max-width: 209px;
+}
+
+.modal-upload__checkbox {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.modal-upload__radio-btn {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+// Animation

@@ -1,0 +1,5 @@
+mixin search({ isOpen }, mixes)
+
+    .search(class=(isOpen) && 'search--open' class=(mixes) && `${mixes}__search`)
+      img.search__icon-loupe(src=require('public/img/icon-loupe.svg') alt='Иконка поиска')
+      input.search__input(placeholder='Поиск' type='text')

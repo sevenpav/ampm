@@ -1,0 +1,48 @@
+#learning-pg {
+  padding-bottom: 22px;
+}
+
+.learning-pg__step {
+  display: none;
+  flex-direction: column;
+}
+
+.learning-pg__greeting {
+  margin: 21px 0 18px;
+  color: #515159;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+}
+
+.learning-pg__course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 34px;
+  margin-bottom: -45px;
+}
+
+// Mixes
+
+.learning-pg__step .learning-pg__btn-normal {
+  align-self: center;
+}
+
+.content-display + .learning-pg__slide-btn {
+  margin-top: 32px;
+}
+
+.learning-pg__slide-btn + .learning-pg__btn-normal {
+  margin-top: 32px;
+}
+
+.learning-pg__category-item {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 45px;
+
+  .category-item__name {
+    font-size: 16px;
+  }
+}

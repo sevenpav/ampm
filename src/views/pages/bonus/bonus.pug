@@ -1,0 +1,18 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #bonus-pg
+
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] })
+
+    +page-title({ title: 'Бонусная система', type: 'line' }, 'bonus-pg')
+
+    +bonus-tabs('bonus-pg')
+
+    +modal-category-bonus

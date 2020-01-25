@@ -1,0 +1,11 @@
+mixin breadcrumbs({ items }, mixes)
+
+  ul.breadcrumbs(class=(mixes) && `${mixes}__breadcrumbs`)
+    each item, idx in items
+      li.breadcrumbs__item
+        a.breadcrumbs__link(href='#')= item
+        if (idx !== items.length - 1)
+          img.breadcrumbs__icon(src=require('views/components/breadcrumbs/img/arrow.svg') alt='Иконка')
+
+
+

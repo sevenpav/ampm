@@ -1,0 +1,22 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #login-pg
+
+    +login-form({ hash: 'auth' }, 'login-pg')
+
+    +recover-form({ hash: 'recover' }, 'login-pg')
+
+    +registration-form({ hash: 'registration' }, 'login-pg')
+
+
+
+
+
+

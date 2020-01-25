@@ -1,0 +1,5 @@
+mixin tags({ tags }, mixes)
+
+  ul.tags(class=(mixes) && `${mixes}__tags`)
+    each tag, idx in tags
+      li.tags__tag(class=(idx === 0) && 'tags__tag--active')= tag

@@ -1,0 +1,10 @@
+mixin slide-btn({ label, title, content }, mixes)
+
+  .slide-btn(class=(mixes) && `${mixes}__slide-btn`)
+    button.slide-btn__self= label
+      img.slide-btn__icon(src=require('views/components/slide-btn/img/icon.svg') alt='Иконка')
+
+    .slide-btn__content
+      p.slide-btn__title= title
+      .slide-btn__content-display.content-display!= content
+

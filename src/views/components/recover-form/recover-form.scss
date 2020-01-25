@@ -1,0 +1,63 @@
+.recover-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.recover-form__title {
+  margin-bottom: 30px;
+  color: #000;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+}
+
+.recover-form__desc {
+  margin-bottom: 25px;
+  color: #515159;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0.25px;
+}
+
+.recover-form__registration-link {
+  display: block;
+  color: #000;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.recover-form__input-text {
+  margin-bottom: 37px;
+}
+
+.recover-form__btn-normal {
+  align-self: center;
+  width: 100%;
+  max-width: 230px;
+  margin-bottom: 32px;
+}
+
+// Animation

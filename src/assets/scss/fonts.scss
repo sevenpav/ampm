@@ -1,0 +1,14 @@
+@include import-font('TondoCorp', 300) {
+  src: url('../../public/fonts/ttf/TondoCorp-Light.ttf') format('truetype'),
+    url('../../public/fonts/woff/TondoCorp-Light.woff') format('woff');
+}
+
+@include import-font('TondoCorp', 400) {
+  src: url('../../public/fonts/ttf/TondoCorp-Regular.ttf') format('truetype'),
+    url('../../public/fonts/woff/TondoCorp-Regular.woff') format('woff');
+}
+
+@include import-font('TondoCorp', 700) {
+  src: url('../../public/fonts/ttf/TondoCorp-Bold.ttf') format('truetype'),
+    url('../../public/fonts/woff/TondoCorp-Bold.woff') format('woff');
+}

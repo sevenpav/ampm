@@ -1,0 +1,23 @@
+mixin registration-form({ hash }, mixes)
+
+  form.registration-form(class=`_${hash}` class=(mixes) && `${mixes}__registration-form`)
+
+    header.registration-form__header
+      h1.registration-form__title Регистрация
+      p.registration-form__desc Все поля обязательны для заполнения
+
+    .registation-form__form-group
+      p.registration-form__form-group-name Личные данные
+      
+      +input-text({ placeholder: 'ФИО' }, 'registration-form')
+      +input-text({ placeholder: 'Продавец' }, 'registration-form')
+      +input-file({ placeholder: 'Скан паспорта' }, 'registration-form')
+
+    .registation-form__form-group
+      p.registration-form__form-group-name Данные магазина
+      
+      +input-text({ placeholder: 'Название' }, 'registration-form')
+      +input-text({ placeholder: 'Адрес' }, 'registration-form')
+      +input-text({ placeholder: 'Юридическое лицо' }, 'registration-form')
+
+    +btn-normal({ label: 'Отправить заявку', type: 'gray' }, 'registration-form')

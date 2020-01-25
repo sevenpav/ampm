@@ -1,0 +1,47 @@
+mixin header({ isAuth }, mixes)
+
+  - const { menu: links, profileMenu } = require('views/components/header/data.js')
+
+  header.header(class=(mixes) && `${mixes}__header`)
+    .header__wrap
+      a.header__logo-link(href='index.html')
+        img.header__logo(src=require('public/img/logo.svg') alt='Логотип AMPM')
+      nav.header__nav
+        each link, idx in links
+          span.header__link-wrap(class=(link.modifier) && `${link.modifier}`)
+            a.header__link(class=(idx === 0) && 'header__link--active' href=`${link.href}`)= link.name
+      
+      if (!isAuth)
+        +search({ isOpen: true }, 'header')
+
+      .header__bar
+        if (isAuth)
+          //- button.header__search-btn
+          //-   img.header__seatch-icon(src=require('public/img/icon-loupe.svg') alt='Иконка поиска')
+          +search({ isOpen: false }, 'header')
+
+          .header__profile
+            .header__profile-menu
+              ul.header__profile-menu-list
+                each link in profileMenu
+                  li.header__profile-menu-item
+                    a.header__profile-menu-link(href=`${link.href}`)
+                      img.header__profile-menu-icon(src=`${link.icon}`)
+                      = link.name
+            .header__avatar
+              img.header__avatar-img(src=require('views/components/header/img/avatar.png') alt='Аватар')
+            .header__profile-info
+              p.header__profile-name Сергей Фролов
+                img.header__profile-icon-more(src=require('views/components/header/img/arrow-down.svg') alt='Иконка выпадающего меню')
+          
+          a.header__cart-link(href='#')
+            img.header__cart-icon(src=require('views/components/header/img/cart.svg') alt='Иконка корзины')
+            span.header__cart-items 10
+        
+        else
+          a.header__login-link(href='login.html#auth')
+            img.header__login-icon(src=require('views/components/header/img/login.svg') alt='Иконка логина')
+            | Авторизация
+
+
+    +catalog-menu('header')

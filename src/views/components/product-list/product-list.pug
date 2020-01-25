@@ -1,0 +1,7 @@
+mixin product-list({ items }, mixes)
+
+  .product-list(class=(mixes) && `${mixes}__product-list`)
+    each item in items
+      +product-item({ item }, 'product-list')
+
+

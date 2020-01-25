@@ -1,0 +1,55 @@
+.select {
+}
+
+.select__label {
+  margin-bottom: 4px;
+  color: #8a8c9b;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.select__wrap {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.select__icon {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+}
+
+.select__self {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 13px 18px;
+  color: #000;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

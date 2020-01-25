@@ -1,0 +1,48 @@
+.category-bonus-item {
+  background: #fff;
+  border-radius: 12px;
+}
+
+.category-bonus-item__img-container {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.category-bonus-item__img {
+  @include img-resp;
+}
+
+.category-bonus-item__footer {
+  padding: 20px 24px 24px;
+}
+
+.category-bonus-item__name {
+  margin-bottom: 23px;
+  color: #000;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.category-bonus-item__btn-normal {
+  padding: 12px 16px;
+}
+
+// Animation

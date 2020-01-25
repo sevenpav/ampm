@@ -1,0 +1,23 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const items = require('./data.js')
+
+  #catalog-pg
+
+    +modal-upload
+
+    header.catalog-pg__header
+
+      +page-title({ title: 'Каталог' })
+
+      +btn-unpload('catalog-pg')
+
+
+    .catalog-pg__items-list
+      each item in items
+        +category-item({ name: item.name, img: item.img, href: item.href }, 'catalog-pg')

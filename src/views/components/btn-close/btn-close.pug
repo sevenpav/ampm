@@ -1,0 +1,5 @@
+mixin btn-close({ type }, mixes)
+
+  span.btn-close(class=(mixes) && `${mixes}__btn-close` class=(type) && `btn-close--${type}`)
+    img.btn-close__icon(src=require('public/img/icon-close.svg') alt='Иконка')
+

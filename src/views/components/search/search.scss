@@ -1,0 +1,60 @@
+.search {
+  position: relative;
+  color: #000;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+
+  &--open {
+    .search__input {
+      display: inline-block;
+    }
+  }
+}
+
+.search__input {
+  display: none;
+  width: 0;
+  height: 100%;
+  padding: 10px 40px;
+  background: #f7f9fd;
+  border: none;
+  border-radius: 22px;
+
+  &::placeholder {
+    color: #8a8c9b;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.25px;
+  }
+}
+
+.search__icon-loupe {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  z-index: 10;
+  width: 19.6px;
+  height: 19.6px;
+  transform: translate(50%, -50%);
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

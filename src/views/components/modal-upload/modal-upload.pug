@@ -1,0 +1,22 @@
+mixin modal-upload(mixes)
+
+  .modal.modal-upload(class=(mixes) && `${mixes}__modal-upload`)
+    header.modal__header
+      .modal__title-group
+        img.modal__header-icon(src=require('public/img/icon-upload.svg') alt='Иконка')
+        p.modal__title Выгрузка товаров
+
+      +btn-close({}, 'modal')
+
+    form.modal-upload__body(action='GET')
+      .modal-upload__form-group
+        p.modal-upload__form-group-name Выгрузить
+        +checkbox({ label: 'Товары актуального прайс-листа', isChecked: true }, 'modal-upload')
+        +checkbox({ label: 'Товары актуального прайс-листа', isChecked: false }, 'modal-upload')
+
+      .modal-upload__form-group
+        p.modal-upload__form-group-name Формат файла
+        +radio-btn({ label: 'CSV', name: 'fileFormat', isChecked: true }, 'modal-upload')
+        +radio-btn({ label: 'CSV', name: 'fileFormat', isChecked: false }, 'modal-upload')
+
+      +btn-normal({ label: 'Скачать', type: 'gray' }, 'modal-upload')

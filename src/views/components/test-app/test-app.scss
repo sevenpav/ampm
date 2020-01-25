@@ -1,0 +1,158 @@
+.test-app {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.test-app__modal {
+  width: 100%;
+  max-width: 369px;
+  height: 100%;
+  max-height: 232px;
+}
+
+.test-app__modal-body {
+  flex: 1;
+  flex-direction: column;
+  @include flex-center;
+}
+
+.test-app__modal-text {
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.1px;
+}
+
+.test-app__header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 28px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e1e5ef;
+}
+
+.test-app__control {
+  display: flex;
+  align-self: flex-start;
+  padding: 4px;
+  background: #fff;
+  border-radius: 22px;
+}
+
+.test-app__control-item {
+  width: 64px;
+  height: 40px;
+  color: #515159;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  background: #e1e5ef;
+  border-radius: 22px;
+  cursor: pointer;
+  @include flex-center;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &--active {
+    color: #fff;
+    background: #515159;
+  }
+}
+
+.test-app__control-icon {
+  margin-left: 9px;
+}
+
+.test-app__title {
+  margin-bottom: 20px;
+  color: #515159;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+
+  &--wrong {
+    color: #ff001f;
+  }
+}
+
+.test-app__body {
+  margin-bottom: 34px;
+}
+
+.test-app__footer {
+  display: flex;
+  align-self: normal;
+}
+
+.test-app__options {
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.test-app__footer .test-app__btn-normal {
+  width: 100%;
+  max-width: 143px;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.test-app__options .test-app__radio-btn {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.test-app__table {
+  width: 100vw;
+  max-width: 344px;
+  color: #000;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 12px;
+  border-spacing: 0;
+
+  tr {
+    &:nth-child(odd) {
+      background: #f7f9fd;
+    }
+
+    td {
+      &:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+  }
+
+  td {
+    padding: 13px 16px;
+  }
+}
+
+// Animation

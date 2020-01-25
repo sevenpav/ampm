@@ -1,0 +1,12 @@
+mixin recover-form({ hash }, mixes)
+
+  form.recover-form(class=`_${hash}` class=(mixes) && `${mixes}__recover-form`)
+    h1.recover-form__title Восстановление пароля
+    p.recover-form__desc Введите e-mail, указанный при регистрации, чтобы получить письмо с новым паролем
+
+    +input-text({ placeholder: 'e-mail' }, 'recover-form')
+
+    +btn-normal({ label: 'Получить пароль', type: 'gray' }, 'recover-form')
+
+    a.recover-form__registration-link(href='#registration') Регистрация
+

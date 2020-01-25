@@ -1,0 +1,29 @@
+.btn-unpload {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.4px;
+}
+
+.btn-unpload__icon-download {
+  margin-right: 8px;
+}
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

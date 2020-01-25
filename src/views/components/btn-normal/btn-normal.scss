@@ -1,0 +1,78 @@
+.btn-normal {
+  display: inline-block;
+  padding: 16px 32px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #000;
+  border: 1px solid transparent;
+  border-radius: 22px;
+
+  &:hover {
+    background: #515159;
+  }
+
+  &:disabled {
+    color: #8a8c9b;
+    background: transparent;
+    border: 1px solid #c9cfdc;
+  }
+
+  &:active {
+    background: #8a8c9b;
+  }
+
+  &--gray {
+    color: #fff;
+    background: #515159;
+    border-color: #515159;
+
+    &:hover {
+      background: #000;
+      border-color: #000;
+    }
+  }
+
+  &--white {
+    color: #000;
+    background: #fff;
+    border: 1px solid #8a8c9b;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &--outline {
+    color: #000;
+    background: transparent;
+    border: 1px solid #000;
+
+    &:hover {
+      color: #fff;
+      background: #000;
+      border-color: #000;
+    }
+  }
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

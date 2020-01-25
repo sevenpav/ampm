@@ -1,0 +1,20 @@
+mixin modal-cart(mixes)
+
+  .modal.modal-cart(class=(mixes) && `${mixes}__modal-cart`)
+    header.modal__header
+      .modal__title-group
+        img.modal__header-icon(src=require('views/components/modal-cart/img/icon-cart.svg') alt='Иконка')
+        p.modal__title Товар добавлен в корзину
+
+      +btn-close({}, 'modal')
+
+    .modal-cart__list
+      each item in [1, 2, 3, 4]
+        +cart-item({ item }, 'modal-cart')
+        
+    footer.modal-cart__footer
+      .modal-cart__footer-btn-group
+        +btn-normal({ label: 'Продолжить покупки', type: 'outline' }, 'modal-cart')
+        +btn-normal({ label: 'Перейти в корзину', type: 'gray', link: 'cart.html' }, 'modal-cart')
+
+        

@@ -1,0 +1,4 @@
+mixin page-title({ title, type }, mixes)
+
+  h1.page-title(class=(type === 'line') && 'page-title--line' class=(mixes) && `${mixes}__page-title`)= title
+

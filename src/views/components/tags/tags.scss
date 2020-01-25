@@ -1,0 +1,47 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -16px;
+  margin-bottom: -18px;
+  padding: 24px 0;
+}
+
+.tags__tag {
+  margin-right: 16px;
+  margin-bottom: 18px;
+  padding: 4px 20px;
+  color: #000;
+  font-size: 14px;
+  line-height: 1;
+  border: 1px solid #515159;
+  border-radius: 15px;
+  cursor: pointer;
+
+  &--active {
+    color: #fff;
+    background: #515159;
+  }
+
+  &:hover {
+    color: #fff;
+    background: #515159;
+  }
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

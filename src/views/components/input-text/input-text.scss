@@ -1,0 +1,62 @@
+.input-text {
+  position: relative;
+
+  &--error {
+    .input-text__label {
+      color: #ff001f;
+    }
+  }
+}
+
+.input-text__input {
+  width: 100%;
+  padding: 10px 18px;
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  background: #fff;
+  border-radius: 20px;
+
+  &::placeholder {
+    color: #8a8c9b;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.25px;
+  }
+
+  &:not(:placeholder-shown) + .input-text__label,
+  &:focus + .input-text__label {
+    top: -4px;
+    opacity: 1;
+  }
+}
+
+.input-text__label {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  color: #8a8c9b;
+  font-size: 10px;
+  line-height: 1;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

@@ -1,0 +1,14 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #order-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'order-pg')
+    +page-title({ title: 'Оформление заказа' }, 'order-pg')
+
+    +order-app('order-pg')

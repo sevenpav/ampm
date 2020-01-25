@@ -1,0 +1,106 @@
+.modal-category-bonus {
+  .modal__header {
+    margin-bottom: 26px;
+  }
+  .modal__title {
+    font-size: 24px;
+  }
+}
+
+.modal-category-bonus__step {
+  display: none;
+
+  &:nth-child(2) {
+    max-width: 800px;
+  }
+
+  &:nth-child(3) {
+    max-width: 550px;
+  }
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal-category-bonus__img-container {
+  display: flex;
+  max-width: 600px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.modal-category-bonus__img {
+  @include img-resp;
+}
+
+.modal-category-bonus__radio-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin-right: -40px;
+  margin-bottom: -24px;
+}
+
+.modal-category-bonus__sum {
+  margin-top: 26px;
+  margin-bottom: 23px;
+  color: #000;
+  font-size: 20px;
+  letter-spacing: 0.15px;
+}
+
+.modal-category-bonus__body {
+  margin-bottom: 28px;
+}
+
+.modal-category-bonus__text {
+  color: #000;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+}
+
+.modal-category-bonus__success-text {
+  color: #000;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.modal-category-bonus__btn-normal {
+  padding: 12px 16px;
+
+  &:first-child {
+    margin-right: 20px;
+  }
+}
+
+.modal-category-bonus__radio-btn {
+  min-width: 72px;
+  margin-right: 40px;
+  margin-bottom: 24px;
+
+  .radio-btn__label-text {
+    color: #8a8c9b;
+  }
+}
+
+// Animation

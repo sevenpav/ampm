@@ -1,0 +1,16 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #test-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'test-pg')
+
+    +page-title({ title: 'Тест по бренду AM.PM', type: 'line' }, 'test-pg')
+
+    +test-app('test-pg')
+

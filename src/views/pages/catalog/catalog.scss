@@ -1,0 +1,23 @@
+#catalog-pg {
+}
+
+.catalog-pg__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+
+.catalog-pg__items-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -45px;
+}
+
+// Mixes
+
+.catalog-pg__category-item {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 45px;
+}

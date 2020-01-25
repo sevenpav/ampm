@@ -1,0 +1,46 @@
+mixin cart-app(mixes)
+
+  .layout-app.cart-app(class=(mixes) && `${mixes}__cart-app`)
+    .modal.cart-app__modal-empty
+      header.modal__header
+        .modal__title-group
+          img.modal__header-icon(src=require('views/components/cart-app/img/icon-modal-cart.svg') alt='Иконка')
+          p.modal__title Очистка корзины
+
+        +btn-close({}, 'modal')
+
+      .cart-app__modal-empty-body
+        p.cart-app__modal-empty-cart-text Удалить все товары из корзины?
+
+      footer.cart-app__modal-empty-footer
+        +btn-normal({ label: 'Удалить', type: 'outline' }, 'cart-app')
+        +btn-normal({ label: 'Отменить', type: 'gray' }, 'cart-app')
+
+
+    .layout-app__display.cart-app__display
+      .cart-app__control
+        +checkbox({ label: 'Выбрать все' }, 'cart-app')
+        
+        button.cart-app__empty-cart-btn Очистить корзину    
+          +btn-close({ type: 'round' }, 'cart-app')
+
+      ul.cart-app__list
+        each item in [1, 2, 3, 4]
+          li.cart-app__item
+            +checkbox({}, 'cart-app')
+            +cart-item('cart-app')
+            +btn-close({}, 'cart-app')
+
+
+    .layout-app__result
+      
+      header.layout-app__result-header Сумма заказа
+      .layout-app__result-body
+        p.layout-app__result-cost Стоимость <span>112 567,00 ₽</span>
+        p.layout-app__result-delivery Доставка <span>3 250,00 ₽</span>
+
+      
+      footer.layout-app__result-footer
+        hr
+        p.layout-app__result-total К оплате: <span>115 817,00 ₽</span>
+        +btn-normal({ label: 'Оплатить', type: 'gray', link: 'order.html' }, 'layout-app')

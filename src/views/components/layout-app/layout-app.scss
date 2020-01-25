@@ -1,0 +1,101 @@
+.layout-app {
+  display: flex;
+}
+
+.layout-app__display {
+  width: 100%;
+  max-width: 850px;
+}
+
+.layout-app__result {
+  align-self: flex-start;
+  width: 100%;
+  max-width: 273px;
+  margin-left: auto;
+  background: #515159;
+  border-radius: 12px 12px 20px 20px;
+}
+
+.layout-app__result-header {
+  padding: 20px 24px 21px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+}
+
+.layout-app__result-body {
+  padding: 24px 16px;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+
+  > * {
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.25px;
+  }
+}
+
+.layout-app__result-cost {
+  margin-bottom: 12px;
+}
+
+.layout-app__result-footer {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+
+  hr {
+    margin: 0 16px;
+    border: 0;
+    border-top: 1px solid #e1e5ef;
+  }
+}
+
+.layout-app__result-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.1px;
+
+  span {
+    padding: 22.5px 0 32px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.15px;
+  }
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.layout-app__result-footer {
+  .layout-app__btn-normal {
+    margin: 0 10px 24px;
+    margin-bottom: 24px;
+  }
+}
+
+// Animation

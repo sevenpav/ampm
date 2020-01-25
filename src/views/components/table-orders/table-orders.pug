@@ -1,0 +1,31 @@
+mixin table-orders(mixes)
+
+  - const { tags, table } = require('views/components/table-orders/data.js')
+
+  .table-orders(class=(mixes) && `${mixes}__table-orders`)
+
+    +tags({ tags }, 'table-orders')
+    
+    table.table.table-orders__self
+      thead.table__thead.table-orders__thead
+        tr
+          td Дата
+          td Заказ №
+          td Сумма
+          td Клиент
+          td Тел. клиента
+          td Продавец
+          td Расчетная дата поставки
+          td Статус
+
+      tbody.table__tbody.table-orders__tbody
+        each tr in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          tr
+            td= table.date
+            td= table.orderNum
+            td= table.sum
+            td= table.client
+            td= table.phone
+            td= table.seller
+            td= table.deliveryDate
+            td= table.status

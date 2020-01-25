@@ -1,0 +1,16 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #course-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'course-pg')
+
+    +page-title({ title: 'Бренд AM.PM', type: 'line' }, 'course-pg')
+
+    +course-tabs
+

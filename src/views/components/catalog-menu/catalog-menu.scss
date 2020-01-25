@@ -1,0 +1,73 @@
+.catalog-menu {
+  padding: 46px 0 70px;
+  background: #fff;
+}
+
+.catalog-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1084px;
+  margin: 0 auto;
+  margin-bottom: -30px;
+}
+
+.catalog-menu__item {
+  display: flex;
+  width: 100%;
+  max-width: 357px;
+  margin-bottom: 30px;
+}
+
+.catalog-menu__sublist-container {
+  margin-left: 20px;
+}
+
+.catalog-menu__name {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #515159;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+
+  &:hover {
+    color: #2bbefc;
+  }
+}
+
+.catalog-menu__subitem {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.catalog-menu__link {
+  display: inline-block;
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+
+  &:hover {
+    color: #2bbefc;
+  }
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

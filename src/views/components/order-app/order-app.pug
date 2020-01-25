@@ -1,0 +1,74 @@
+mixin order-app(mixes)
+
+  .layout-app.order-app(class=(mixes) && `${mixes}__order-app`)
+    .layout-app__display
+      .order-app__order-list
+        p.order-app__order-list-title Состав заказа
+        ul.order-app__order-list-self
+          each item in [1, 2]
+            li.order-app__order-item
+              +cart-item({ isOrder: true }, 'order-app')
+
+      .order-app__group
+        p.order-app__title Контрагент
+        +select({ label: 'Имя клиента', items: ['ООО “АкваФорум Сити Компани”', 'ООО Тест 1', 'ООО Тест 2', 'ООО Тест 3'] }, 'order-app')
+
+      .order-app__group
+        p.order-app__title Общие данные
+        .order-app__form-group
+          +input-text({ placeholder: 'Имя клиента' }, 'order-app')
+          +input-text({ placeholder: 'Телефон' }, 'order-app')
+          +input-text({ placeholder: 'Адрес' }, 'order-app')
+
+      .order-app__group
+        p.order-app__title Способ доставки
+        .order-app__delivery
+          .order-app__delivery-tabs
+            button.order-app__delivery-tab.order-app__delivery-tab--active На отгрузку
+            button.order-app__delivery-tab Резерв
+
+          .order-app__delivery-form-container
+            .order-app__delivery-form-group
+              p.order-app__delivery-form-label Способ отгрузки
+              .order-app__delivery-radio-btns
+                +radio-btn({ label: 'На склад' }, 'order-app')
+                +radio-btn({ label: 'Самовывоз' }, 'order-app')
+
+            .order-app__delivery-form-group
+              p.order-app__delivery-form-label Дата отгрузки
+              .order-app__delivery-date-group
+                img.order-app_calendar-icon(src=require('views/components/order-app/img/calendar-icon.svg') alt='Иконка')
+                p.order-app-delivery-date 19 февраля 2019
+
+
+            .order-app__delivery-form-group
+              p.order-app__delivery-form-label Адрес склада
+              p.order-app__delivery-address г. Новосибирск, ул. Горская, д. 58
+
+
+        .order-app_delivery-comment
+          p.order-app__delivery-form-label Комментарий
+          textarea.order-app__delivery-comment-textarea(type='text' placeholder='Введите комментарий')
+
+          
+
+              
+
+              
+              
+
+
+    .layout-app__result
+      
+      header.layout-app__result-header Сумма заказа
+      .layout-app__result-body
+        p.layout-app__result-cost Стоимость <span>28 954 567,00 ₽</span>
+        p.layout-app__result-delivery Доставка <span>1 563 250,00 ₽</span>
+
+      
+      footer.layout-app__result-footer
+        hr
+        p.layout-app__result-total К оплате: <span>30 517 817,00 ₽</span>
+        +btn-normal({ label: 'Купить', type: 'gray', link: 'order.html' }, 'layout-app')
+
+

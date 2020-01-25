@@ -1,0 +1,17 @@
+mixin catalog-menu(mixes)
+
+  - const items = require('views/components/catalog-menu/data.js')
+
+  .catalog-menu(class=(mixes) && `${mixes}__catalog-menu`)
+    ul.catalog-menu__list
+      each item in items
+        li.catalog-menu__item
+          .catalog-menu__icon-container
+            img.catalog-menu__icon(src=`${item.icon}` alt='Иконка')
+
+          .catalog-menu__sublist-container
+            a.catalog-menu__name(href='#')= item.name
+            ul.catalog-menu__sublist
+              each link in item.links
+                li.catalog-menu__subitem
+                  a.catalog-menu__link(href='#')= link

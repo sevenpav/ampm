@@ -1,0 +1,46 @@
+mixin course-tabs(mixes)
+
+  - const { tabs, testDesc, resultTable } = require('views/components/course-tabs/data.js')
+
+  .course-tabs(class=(mixes) && `${mixes}__course-tabs`)
+    header.course-tabs__header
+      .course-tabs__tab-switch
+        each tab, idx in tabs
+          button.course-tabs__tab-btn(class=(idx === 0) && 'course-tabs__tab-btn--active' data-target=`${tab}`)= tab
+            if (idx === tabs.length - 1)
+              span.course-tabs__tab-btn-label 23
+
+
+    .course-tabs__container
+      .course-tabs__tab._desc(data-target='Описание курса')
+
+        .content-display
+          p.text!= 'В каких измерениях обычно работают производители сантехники? <br> И чем принципиально отличается  уникальный подход бренда АМ.РМ? <br> Об этом  (и не только) ты узнаешь в разделе «Бренд АМ.РМ»'
+        
+        footer.course-tabs__footer
+          +btn-normal({ label: 'К списку курсов', type: 'white', link: 'learning.html#course-list' }, 'course-tabs')
+
+          +btn-normal({ label: 'Начать курс обучения', type: 'gray', target: 'Прохождение курса' }, 'course-tabs')
+
+      .course-tabs__tab._course(data-target='Прохождение курса')
+
+
+      .course-tabs__tab(data-target='Тесты')
+
+        p.course-tabs__subtitle Тесты
+
+        .content-display!= testDesc
+
+        +btn-normal({ label: 'Продолжить', type: 'gray', link: 'test.html' }, 'course-tabs')
+          
+        
+        footer.course-tabs__footer
+          +btn-normal({ label: 'К списку курсов', type: 'outline', link: 'learning.html#course-list' }, 'course-tabs')
+
+          +btn-normal({ label: 'Описание курса', type: 'outline', target: 'Описание курса' }, 'course-tabs')
+
+          +btn-normal({ label: 'Прохождение курса', type: 'outline', target: 'Прохождение курса' }, 'course-tabs')
+      
+      .course-tabs__tab._result
+
+        +table({ thead: resultTable.thead, tbody: resultTable.tbody }, 'course-tabs')

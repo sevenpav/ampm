@@ -1,0 +1,20 @@
+mixin input-file({ placeholder }, mixes)
+
+  .input-file(class=(mixes) && `${mixes}__input-file`)
+    .input-file__self
+      input.input-file__input(id='file-upload' type='file' name='file-upload')
+
+      label.input-file__label(for='file-upload')= placeholder
+
+      p.input-file__placeholder= placeholder
+
+      
+      .input-file__icon-group
+        p.input-file__icon-label Выбрать
+        include ../../../public/img/icon-upload.svg
+
+    .input-file__notice
+      img.input-file__notice-icon(src=require('views/components/input-file/img/icon-notice.svg') alt='Иконка')
+      p.input-file__notice-text!= 'Допустимые форматы: JPEG, PNG <br> Размер файла: до 10MB'
+
+    

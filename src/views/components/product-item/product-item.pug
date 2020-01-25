@@ -1,0 +1,16 @@
+mixin product-item({ item }, mixes)
+
+  .product-item(class=(mixes) && `${mixes}__product-item`)
+
+
+    .product-item__img-container
+      img.product-item__img(src=`${item.img}` alt='Изображение')
+    
+    p.product-item__num= item.num
+    p.product-item__name= item.name
+    .product-item__price-group
+      p.product-item__oldPrice= item.oldPrice
+      p.product-item__price= item.price
+    
+    +btn-normal({ label: 'Добавить в корзину', type: 'outline' }, 'product-item')
+

@@ -1,0 +1,70 @@
+.registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form__header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.registration-form__title {
+  margin-bottom: 11px;
+  color: #000;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+}
+
+.registration-form__desc {
+  color: #515159;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+}
+
+.registation-form__form-group {
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+  > div {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.registration-form__form-group-name {
+  margin-bottom: 24px;
+  color: #515159;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.1px;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.registration-form__btn-normal {
+  align-self: center;
+  width: 100%;
+  max-width: 197px;
+}
+
+// Animation
