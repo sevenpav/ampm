@@ -1,0 +1,12 @@
+mixin product-download(mixes)
+
+  .product-download(class=(mixes) && `${mixes}__product-download`)
+    .product-download__icon-container
+      img.product-download__icon(src=require('views/components/product-download/img/i-download.svg') alt='Иконка')
+    
+    a.product-download__link(href='#') Посмотреть инструкцию
+      span (PDF)
+
+    a.product-download__link(href='#') Посмотреть схему
+      span (JPG)
+

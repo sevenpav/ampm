@@ -1,0 +1,16 @@
+mixin product-char(mixes)
+
+  .product-char(class=(mixes) && `${mixes}__product-char`)
+    ul.product-char__list
+      each img in [require('views/components/product-char/img/item-1.png'), require('views/components/product-char/img/item-2.png'), require('views/components/product-char/img/item-3.png')]
+        li.product-char__item
+          .product-char__img-container
+            img.product-char__img(src=`${img}` alt='Изображение')
+
+          .product-char__content-side
+            p.product-char__title ЭМОЦИОНАЛЬНЫЙ
+            p.product-char__text Gem – это трендовые продукты для ванной комнаты по доступной цене, разработанные инновационной студией DanelonMeroni. Во главе агентства стоят учредители Клаудия Данелон и Федерико Мерони. Они используют свой опыт в архитектуре, интерьерном, промышленном дизайне и брендинге для создания ультрамодных и функциональных продуктов. Со дня основания студии продукты от DanelonMeroni традиционно появляются на международных европейских выставках и не сходят со страниц дизайнерских журналов.
+    
+    button.product-char__btn-show-more ПОКАЗАТЬ ВСЕ ХАРАКТЕРИСТИКИ
+      img.product-char__btn-icon(src=require('views/components/product-char/img/i-arrow.svg') alt='Иконка')
+

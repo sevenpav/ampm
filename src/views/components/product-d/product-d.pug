@@ -1,0 +1,60 @@
+mixin product-d(mixes)
+
+  .product-d(class=(mixes) && `${mixes}__product-d`)
+    .product-d__img-side
+      .product-d__img-container
+        img.product-d__img(src=require('views/components/product-d/img/item.png') alt='Изображение')
+      .product-d__sub-slider
+        ul.product-d__sub-slider-list
+          each item in [1, 2, 3, 4 ,5 ,6, 7, 8, 9, 10]
+            li.product-d__sub-slider-item
+              img.product-d__sub-slider-img(src=require('views/components/product-d/img/subitem.png') alt='Изображение')
+
+    .product-d__info-side
+      .product-d__title-group
+        p.product-d__collection-name GEM
+        h1.product-d__name Комплект мебели напольный 60/75 см
+      
+      .product-d__config
+        .product-d__config-group
+          .product-d__config-size
+            p.product-d__config-title Размер комплекта
+            ul.product-d__config-size-list
+              each item, idx in [60, 75]
+                li.product-d__config-size-item(class=(idx === 0 && 'product-d__config-size-item--active'))= item
+        
+        .product-d__config-group
+          p.product-d__config-title Цвет комплекта
+            .product-d__config-color
+              ul.product-d__config-color-list
+                each name, idx in ['белый', 'синий', 'черный']
+                  li.product-d__config-color-item(class=(idx === 0) && 'product-d__config-color-item--active')
+                    span.product-d__config-color-bg
+                    span.product-d__config-color-name= name
+
+        .product-d__config-group
+          .product-d__config-oriantation
+            p.product-d__config-title Ориентация
+            ul.product-d__config-oriantation-list
+              each item, idx in ['Левая', 'Правая']
+                li.product-d__config-oriantation-item(class=(idx === 1) && 'product-d__config-oriantation-item--active')= item
+
+        .product-d__config-group
+          .product-d__config-overall-size
+            p.product-d__config-title Цвет комплекта
+            p.product-d__config-text 2 880  Х  1 130  Х 550
+
+      .product-d__award-container
+        img.product-d__award-logo(src=require('views/components/product-d/img/award-logo.png') alt='Логотип')
+
+      p.product-d__desc Новый взгляд на минимализм – трендовый дизайн теперь доступен и в сегменте эконом <br><br> Компактное дизайнерское решение: узкая база с глубокими ящиками идеально впишется в санузел любого размера без ущерба для вместительности Безупречный баланс между функциональностью и дизайном в керамической раковине
+
+      footer.product-d__footer
+        p.product-d__price 57 780 ₽
+          span.product-d__old-price 68 780 ₽
+        
+        +btn-normal({ label: 'Добавить в корзину' }, 'product-d')
+
+
+
+

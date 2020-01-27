@@ -1,0 +1,23 @@
+extends ~@/layout
+
+block title
+  title
+
+block float-content
+
+  - const data = require('./data.js')
+
+  #kits-pg
+    .container
+      +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'kits-pg')
+
+      +product-d('kits-pg')
+
+      +kits-slider('kits-pg')
+
+    +adv-list('kits-pg')
+
+    .container
+      +product-char('kits-pg')
+
+    +product-download('kits-pg')

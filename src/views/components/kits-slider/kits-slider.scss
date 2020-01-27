@@ -1,0 +1,138 @@
+.kits-slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.kits-slider__title {
+  margin-bottom: 28px;
+  color: #1c2e36;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.kits-slider__list {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.kits-slider__item {
+  min-width: 273px;
+  padding: 0 16px 19px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 24px 16px rgba(0, 32, 80, 0.05);
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.kits-slider__img-container {
+  margin-bottom: 8px;
+}
+
+.kits-slider__img {
+  @include img-resp;
+}
+
+.kits-slider__collection-name {
+  margin-bottom: 8px;
+  color: rgba(#515159, 0.5);
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.4px;
+}
+
+.kits-slider__name {
+  margin-bottom: 19px;
+  color: #1c2e36;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0.1px;
+}
+
+.kits-slider__rest-items {
+  margin-bottom: 11px;
+  color: rgba(#1c2e36, 0.5);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.kits-slider__oldprice {
+  margin-bottom: 6px;
+  color: rgba(#515159, 0.5);
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+  text-decoration: line-through;
+}
+
+.kits-slider__price {
+  margin-bottom: 14px;
+  color: #000;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+}
+
+.kits-slider__pagination {
+  align-self: center;
+}
+
+.kits-slider__pagination-name {
+  margin-bottom: 20px;
+  color: #515159;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  text-align: center;
+}
+
+.kits-slider__pagination-list {
+  display: flex;
+}
+
+.kits-slider__pagination-item {
+  width: 50px;
+  height: 4px;
+  background: #cfd9e5;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &--active {
+    background: #000;
+  }
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+.kits-slider__btn-normal {
+  width: 100%;
+  padding: 7px 0;
+}
+
+// Animation
