@@ -14,41 +14,41 @@ mixin table-orders(mixes)
         
         +select({ items: ['Продавец', 'Сергей Епифанцев'] }, 'table-orders')
 
-    
-    table.table.table-orders__self
-      thead.table__thead.table-orders__thead
-        tr
-          td Дата
-          td Заказ №
-          td Сумма
-          td Клиент
-          td Тел. клиента
-          td Продавец
-          td Расчетная дата поставки
-          td Статус
+    .table
+      table.table__self.table-orders__self
+        thead.table__thead.table-orders__thead
+          tr
+            td Дата
+            td Заказ №
+            td Сумма
+            td Клиент
+            td Тел. клиента
+            td Продавец
+            td Расчетная дата поставки
+            td Статус
 
-      tbody.table__tbody.table-orders__tbody
-        each tr in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-          tr(data-href='order.html')
-            td= table.date
-            td= table.orderNum
-            td= table.sum
-            td= table.client
-            td= table.phone
-            td= table.seller
-            td= table.deliveryDate
-            td= table.status
+        tbody.table__tbody.table-orders__tbody
+          each tr in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            tr(data-href='order.html')
+              td= table.date
+              td= table.orderNum
+              td= table.sum
+              td= table.client
+              td= table.phone
+              td= table.seller
+              td= table.deliveryDate
+              td= table.status
 
-    footer.table-orders__footer
-      .table-orders__select-output
-        each val, idx in [10, 25, 50]
-          button.table-orders__select-val(class=(idx === 0) && 'table-orders__select-val--active')= val
+      footer.table__footer
+        .table__select-output
+          each val, idx in [10, 25, 50]
+            button.table__select-val(class=(idx === 0) && 'table__select-val--active')= val
 
-      .table-orders__pagination
-        button.table-orders__btn-prev
-          img.table-orders__icon-arrow(src=require('views/components/table-orders/img/i-arrow.svg') alt='Иконка')
-        .table-orders__pagination-list
-          each val, idx in [1, 2, 3, 4, 5]
-            button.table-orders__btn-page(class=(idx === 0) && 'table-orders__btn-page--active')= val
-        button.table-orders__btn-next
-          img.table-orders__icon-arrow(src=require('views/components/table-orders/img/i-arrow.svg') alt='Иконка')
+        .table__pagination
+          button.table__btn-prev
+            img.table__icon-arrow(src=require('views/components/table/img/i-arrow.svg') alt='Иконка')
+          .table__pagination-list
+            each val, idx in [1, 2, 3, 4, 5]
+              button.table__btn-page(class=(idx === 0) && 'table__btn-page--active')= val
+          button.table__btn-next
+            img.table__icon-arrow(src=require('views/components/table/img/i-arrow.svg') alt='Иконка')

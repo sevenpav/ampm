@@ -1,4 +1,7 @@
 .table {
+}
+
+.table__self {
   width: 100%;
   padding: 16px;
   color: #000;
@@ -53,6 +56,76 @@
   td {
     padding: 12px 0;
   }
+}
+
+.table__footer {
+  display: flex;
+  margin-top: 14px;
+}
+
+.table__pagination {
+  margin-left: auto;
+}
+
+.table__select-output {
+  display: flex;
+}
+
+.table__select-val,
+.table__btn-page {
+  min-width: 30px;
+  min-height: 30px;
+  color: #000;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  background: #f7f9fd;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include flex-center;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &--active {
+    color: #fff;
+    background: #8a8c9b;
+  }
+}
+
+.table__select-val {
+  &:not(.table__select-val--active):hover {
+    background: #fff;
+  }
+}
+
+.table__btn-page {
+  &:not(.table__btn-page--active):hover {
+    background: #fff;
+  }
+}
+
+.table__pagination {
+  display: flex;
+  align-items: center;
+}
+
+.table__btn-prev,
+.table__btn-next {
+  cursor: pointer;
+
+  @include flex-center;
+}
+
+.table__btn-next {
+  transform: scale(-1, -1);
+}
+
+.table__pagination-list {
+  display: flex;
+  margin: 0 13px;
 }
 
 // Media queries

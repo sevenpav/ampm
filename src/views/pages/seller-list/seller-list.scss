@@ -1,0 +1,16 @@
+#seller-list-pg {
+}
+
+.seller-list-pg__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+// Mixes
+
+.seller-list-pg__header {
+  .seller-list-pg__btn-normal {
+    margin-left: auto;
+  }
+}
