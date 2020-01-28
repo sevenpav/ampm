@@ -1,8 +1,48 @@
 #order-pg {
 }
 
+.order-pg__app-double-screen {
+  display: flex;
+  margin-right: -16px;
+
+  > * {
+    width: 50%;
+    margin-right: 16px;
+  }
+}
+
+.order-pg__app-display {
+  display: flex;
+  flex-direction: column;
+
+  .content-display {
+    flex-grow: 1;
+  }
+}
+
+.order-pg__app-title {
+  margin-bottom: 20px;
+  color: #515159;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+}
+
+.order-pg__app-display__table {
+  width: 100%;
+
+  tr {
+    td {
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
 // Mixes
 
 .order-pg__page-title {
-  margin-bottom: 13px;
+  margin-bottom: 17px;
 }

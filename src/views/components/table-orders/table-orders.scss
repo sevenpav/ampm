@@ -1,6 +1,12 @@
 .table-orders {
 }
 
+.table-orders__tbody {
+  tr {
+    cursor: pointer;
+  }
+}
+
 // Media queries
 
 @include less-xl {

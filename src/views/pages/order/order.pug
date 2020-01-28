@@ -9,6 +9,42 @@ block content
 
   #order-pg
     +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'order-pg')
-    +page-title({ title: 'Оформление заказа' }, 'order-pg')
+    +page-title({ title: 'Заказ №20128', type: 'line' }, 'order-pg')
 
-    +order-app('order-pg')
+    .order-pg__app
+      .order-pg__app-double-screen
+        .order-pg__app-display
+          h4.order-pg__app-title Информация о заказе
+          .content-display
+            table.content-table.order-pg__app-display__table
+              tr
+                td Дата поставки в магазин
+                td 05.12.19
+              tr
+                td Общая сумма
+                td 39 680 ₽ 
+              tr
+                td Продавец
+                td Сергей Епифанцев
+              tr
+                td Статус
+                td Оформлен
+            
+        .order-pg__app-display
+          h4.order-pg__app-title Информация о клиенте
+          .content-display
+            table.content-table.order-pg__app-display__table
+              tr
+                td Клиент
+                td Антон Камолов
+              tr
+                td Телефон клиента
+                td +7 952 799 25 14
+              tr
+                td Адрес
+                td г. Калининград, Московский проспект, 40
+
+            p.subtitle Комментарий
+            p Таким образом постоянный количественный рост <br> и сфера нашей активности обеспечивает широкому кругу (специалистов)
+
+            

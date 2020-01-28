@@ -4,7 +4,7 @@ mixin header({ isAuth }, mixes)
 
   header.header(class=(mixes) && `${mixes}__header`)
     .header__wrap
-      a.header__logo-link(href='index.html')
+      a.header__logo-link(href='catalog.html')
         img.header__logo(src=require('public/img/logo.svg') alt='Логотип AMPM')
       nav.header__nav
         each link, idx in links

@@ -53,7 +53,8 @@ const config = {
     ]
   },
   devServer: {
-    open: true
+    open: true,
+    index: 'catalog.html'
   },
   mode: isDev ? 'development' : 'production',
   watch: isDev,

@@ -16,7 +16,7 @@ module.exports = {
     },
     {
       name: 'ЗАКАЗЫ',
-      href: 'orders.html'
+      href: 'order-list.html'
     },
     {
       name: 'БОНУСЫ',
@@ -31,7 +31,7 @@ module.exports = {
     {
       icon: require('views/components/header/img/icon-order.svg'),
       name: 'Заказы',
-      href: 'orders.html'
+      href: 'order-list.html'
     },
     {
       icon: require('views/components/header/img/icon-help.svg'),
