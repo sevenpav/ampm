@@ -5,7 +5,7 @@ block title
 
 block content
 
-  - const data = require('./data.js')
+  - const { table } = require('./data.js')
 
   #order-pg
     +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'order-pg')
@@ -46,5 +46,15 @@ block content
 
             p.subtitle Комментарий
             p Таким образом постоянный количественный рост <br> и сфера нашей активности обеспечивает широкому кругу (специалистов)
+
+            
+      .order-pg__app-display
+        h4.order-pg__app-title Заказ №4563287
+        +table(table, 'order-pg')
+
+
+      footer.order-pg__app-footer
+        +btn-normal({ label: 'Отменить заказ', type: 'outline' }, 'order-pg')
+        +btn-normal({ label: 'Разместить заказ', type: 'gray' }, 'order-pg')
 
             

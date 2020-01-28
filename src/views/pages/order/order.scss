@@ -4,6 +4,7 @@
 .order-pg__app-double-screen {
   display: flex;
   margin-right: -16px;
+  margin-bottom: 37px;
 
   > * {
     width: 50%;
@@ -41,8 +42,22 @@
   }
 }
 
+.order-pg__app-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
 // Mixes
 
 .order-pg__page-title {
   margin-bottom: 17px;
+}
+
+.order-pg__app-footer {
+  .order-pg__btn-normal {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
 }
