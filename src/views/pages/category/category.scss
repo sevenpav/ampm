@@ -1,0 +1,45 @@
+#category-pg {
+  margin-bottom: 80px;
+}
+
+.category-pg__tabs {
+  display: flex;
+  margin-bottom: 22px;
+  background: #fff;
+  border-radius: 22px;
+}
+
+.category-pg__tab {
+  width: 25%;
+  padding: 14px 0;
+  color: #000;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 22px;
+
+  &:not(.category-pg__tab--active):hover {
+    background: lighten(#515159, 60%);
+  }
+
+  &--active {
+    color: #fff;
+    background: #515159;
+  }
+}
+
+.category-pg__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -16px;
+  margin-bottom: -16px;
+}
+
+// Mixes
+
+.category-pg__product-item-2 {
+  margin-right: 16px;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,21 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #category-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'category-pg')
+
+    .category-pg__app
+      .category-pg__tabs
+        each tab, idx in ['Все', 'Напольные', 'Подвесные', 'Приставные'] 
+         button.category-pg__tab(class=(idx === 0) && 'category-pg__tab--active')= tab
+      
+      .category-pg__list
+        each item in [1, 2, 3, 4, 5, 6, 7, 8]
+          +product-item-2('category-pg')
+

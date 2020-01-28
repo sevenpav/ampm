@@ -1,0 +1,14 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #checkout-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'checkout-pg')
+    +page-title({ title: 'Оформление заказа' }, 'checkout-pg')
+
+    +order-app('checkout-pg')
