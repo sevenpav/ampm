@@ -17,6 +17,15 @@
   font-size: 12px;
   line-height: 1;
   letter-spacing: 0.4px;
+  cursor: default;
+
+  &:not(:last-child) {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .breadcrumbs__icon {
