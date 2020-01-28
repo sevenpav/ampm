@@ -1,6 +1,6 @@
-mixin input-text({ placeholder }, mixes)
+mixin input-text({ placeholder, type }, mixes)
 
-  .input-text(class=(mixes) && `${mixes}__input-text`)
+  .input-text(class=(mixes) && `${mixes}__input-text` class=(type === 'bg') && 'input-text--bg')
     input.input-text__input(type="text" placeholder=`${placeholder}`)
     label.input-text__label= placeholder
 

@@ -1,4 +1,9 @@
 .select {
+  &--bg {
+    .select__self-wrap {
+      background: #f7f9fd;
+    }
+  }
 }
 
 .select__wrap {

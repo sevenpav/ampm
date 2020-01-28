@@ -6,6 +6,12 @@
       color: #ff001f;
     }
   }
+
+  &--bg {
+    .input-text__input {
+      background: #f7f9fd;
+    }
+  }
 }
 
 .input-text__input {

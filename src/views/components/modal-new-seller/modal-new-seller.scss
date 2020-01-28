@@ -1,27 +1,47 @@
 .modal-new-seller {
-  
+}
+
+.modal-new-seller__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 42px;
 }
 
 // Media queries
 
 @include less-xl {
-
 }
 
 @include less-lg {
-  
 }
 
 @include less-md {
-  
 }
 
 @include less-sm {
-  
 }
 
 // Mixes
 
+.modal-new-seller__select {
+  margin-bottom: 46px;
+
+  .select__self-wrap {
+    width: 100%;
+  }
+}
+
+.modal-new-seller__input-text {
+  &:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+}
+
+.modal-new-seller__btn-normal {
+  align-self: center;
+  width: 100%;
+  max-width: 222px;
+  margin-top: 32px;
+}
 
 // Animation
- 

@@ -1,6 +1,6 @@
-mixin select({ label, items, button }, mixes)
+mixin select({ label, items, button, type }, mixes)
 
-  .select(class=(mixes) && `${mixes}__select`)
+  .select(class=(mixes) && `${mixes}__select` class=(type === 'bg') && 'select--bg')
     if (label)
       p.select__label= label
 

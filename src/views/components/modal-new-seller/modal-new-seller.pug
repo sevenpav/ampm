@@ -1,4 +1,18 @@
 mixin modal-new-seller(mixes)
 
-  .modal-new-seller(class=(mixes) && `${mixes}__modal-new-seller`)
+  .modal.modal-new-seller(class=(mixes) && `${mixes}__modal-new-seller`)
+    header.modal__header
+      .modal__title-group
+        img.modal__header-icon(src=require('public/img/icon-upload.svg') alt='Иконка')
+        p.modal__title Новый продавец
 
+      +btn-close({}, 'modal')
+
+    
+    form.modal-new-seller__form
+      +select({ items: ['Магазин'], type: 'bg' }, 'modal-new-seller')
+      +input-text({ placeholder: 'Логин', type: 'bg' }, 'modal-new-seller')
+      +input-text({ placeholder: 'Имя', type: 'bg' }, 'modal-new-seller')
+      +input-text({ placeholder: 'Фамилия', type: 'bg' }, 'modal-new-seller')
+      +input-text({ placeholder: 'Отчество', type: 'bg' }, 'modal-new-seller')
+      +btn-normal({ label: 'Добавить', type: 'gray' }, 'modal-new-seller')
