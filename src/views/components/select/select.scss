@@ -1,6 +1,10 @@
 .select {
 }
 
+.select__wrap {
+  display: flex;
+}
+
 .select__label {
   margin-bottom: 4px;
   color: #8a8c9b;
@@ -8,7 +12,7 @@
   line-height: 1;
 }
 
-.select__wrap {
+.select__self-wrap {
   position: relative;
   background: #fff;
   border-radius: 20px;
@@ -51,5 +55,9 @@
 }
 
 // Mixes
+
+.select__btn-normal {
+  margin-left: 32px;
+}
 
 // Animation

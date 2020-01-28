@@ -1,0 +1,19 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #order-list-owner-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'order-list-owner-pg')
+    +page-title({ title: 'Список заказов', type: 'line' }, 'order-list-owner-pg')
+
+    .order-list-owner-pg__app
+      p.order-list-owner-pg__app-subtitle Магазин
+
+      +select({ items: ['ООО “АкваФорум Сити Компани”', 'Тест 1', 'Тест 2'], button: 'Показать' }, 'order-list-owner-pg')
+
+      +table-orders()

@@ -1,0 +1,25 @@
+#order-list-owner-pg {
+}
+
+.order-list-owner-pg__app-subtitle {
+  margin-bottom: 20px;
+  color: #515159;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+}
+
+// Mixes
+
+.order-list-owner-pg__select {
+  margin-bottom: 42px;
+
+  .select__self-wrap {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.order-list-owner-pg__page-title {
+  margin-bottom: 15px;
+}

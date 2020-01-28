@@ -1,10 +1,19 @@
 mixin table-orders(mixes)
 
-  - const { tags, table } = require('views/components/table-orders/data.js')
+  - const { tabs, table } = require('views/components/table-orders/data.js')
 
   .table-orders(class=(mixes) && `${mixes}__table-orders`)
 
-    +tags({ tags }, 'table-orders')
+    
+    header.table-orders__header
+      p.table-orders__title Фильтр
+      .table-orders__filter
+        .table-orders__tabs
+          each tab, idx in tabs
+            button.table-orders__tab(class=(idx === 0 && 'table-orders__tab--active'))= tab
+        
+        +select({ items: ['Продавец', 'Сергей Епифанцев'] }, 'table-orders')
+
     
     table.table.table-orders__self
       thead.table__thead.table-orders__thead
@@ -29,3 +38,17 @@ mixin table-orders(mixes)
             td= table.seller
             td= table.deliveryDate
             td= table.status
+
+    footer.table-orders__footer
+      .table-orders__select-output
+        each val, idx in [10, 25, 50]
+          button.table-orders__select-val(class=(idx === 0) && 'table-orders__select-val--active')= val
+
+      .table-orders__pagination
+        button.table-orders__btn-prev
+          img.table-orders__icon-arrow(src=require('views/components/table-orders/img/i-arrow.svg') alt='Иконка')
+        .table-orders__pagination-list
+          each val, idx in [1, 2, 3, 4, 5]
+            button.table-orders__btn-page(class=(idx === 0) && 'table-orders__btn-page--active')= val
+        button.table-orders__btn-next
+          img.table-orders__icon-arrow(src=require('views/components/table-orders/img/i-arrow.svg') alt='Иконка')

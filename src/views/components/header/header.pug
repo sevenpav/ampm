@@ -12,13 +12,13 @@ mixin header({ isAuth }, mixes)
             a.header__link(class=(idx === 0) && 'header__link--active' href=`${link.href}`)= link.name
       
       if (!isAuth)
-        +search({ isOpen: true }, 'header')
+        //- +search({ isOpen: true }, 'header')
 
       .header__bar
         if (isAuth)
           //- button.header__search-btn
           //-   img.header__seatch-icon(src=require('public/img/icon-loupe.svg') alt='Иконка поиска')
-          +search({ isOpen: false }, 'header')
+          //- +search({ isOpen: false }, 'header')
 
           .header__profile
             .header__profile-menu

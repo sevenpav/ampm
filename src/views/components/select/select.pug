@@ -1,11 +1,16 @@
-mixin select({ label, items }, mixes)
+mixin select({ label, items, button }, mixes)
 
   .select(class=(mixes) && `${mixes}__select`)
-    p.select__label= label
+    if (label)
+      p.select__label= label
+
     .select__wrap
-      select.select__self
-        each item in items
-          option.select__option= item
+      .select__self-wrap
+        select.select__self
+          each item in items
+            option.select__option= item
 
-      img.select__icon(src=require('views/components/select/img/icon-arrow.svg') alt='Иконка')
+        img.select__icon(src=require('views/components/select/img/icon-arrow.svg') alt='Иконка')
 
+      if (button)
+        +btn-normal({ label: button, type: 'gray' }, 'select')
