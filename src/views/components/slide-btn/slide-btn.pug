@@ -1,4 +1,4 @@
-mixin slide-btn({ label, title, content }, mixes)
+mixin slide-btn({ label, title, content, btn }, mixes)
 
   .slide-btn(class=(mixes) && `${mixes}__slide-btn`)
     button.slide-btn__self= label
@@ -7,4 +7,9 @@ mixin slide-btn({ label, title, content }, mixes)
     .slide-btn__content
       p.slide-btn__title= title
       .slide-btn__content-display.content-display!= content
+
+      if (btn)
+        footer.slide-btn__footer
+          +btn-normal({ label: btn.label, type: btn.type, link: btn.link }, 'slide-btn')
+    
 

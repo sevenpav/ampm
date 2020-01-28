@@ -24,10 +24,6 @@
 .slide-btn__content {
   display: none;
   transition: none;
-
-  &--show {
-    display: block;
-  }
 }
 
 .slide-btn__title {
@@ -37,6 +33,10 @@
   font-size: 20px;
   line-height: 1;
   letter-spacing: 0.15px;
+}
+
+.slide-btn__footer {
+  text-align: center;
 }
 
 // Media queries
@@ -54,5 +54,9 @@
 }
 
 // Mixes
+
+.slide-btn__btn-normal {
+  margin-top: 32px;
+}
 
 // Animation
