@@ -1,12 +1,12 @@
 mixin table({ thead, tbody }, mixes)
 
   table.table(class=(mixes) && `${mixes}__table`)
-    thead.table__thead.table-orders__thead
+    thead.table__thead
       tr
         each td in thead
           td= td
 
-    tbody.table__tbody.table-orders__tbody
+    tbody.table__tbody
       each tr in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         tr
           each td in tbody
