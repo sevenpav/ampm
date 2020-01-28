@@ -1,7 +1,7 @@
 mixin table({ thead, tbody, withPagination }, mixes)
 
-  .table
-    table.table__self(class=(mixes) && `${mixes}__table`)
+  .table(class=(mixes) && `${mixes}__table`)
+    table.table__self
       thead.table__thead
         tr
           each td in thead

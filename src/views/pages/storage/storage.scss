@@ -1,0 +1,54 @@
+#storage-pg {
+}
+
+.storage-pg__app-subtitle {
+  margin-bottom: 20px;
+  color: #515159;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+}
+
+.storage-pg__app-shop-group {
+  margin-bottom: 22px;
+}
+
+.storage-pg__app-search-group {
+  margin-bottom: 40px;
+}
+
+.storage-pg__app-search {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -16px;
+  margin-bottom: -16px;
+
+  > * {
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+// Mixes
+
+.storage-pg__page-title {
+  margin-bottom: 15px;
+}
+
+.storage-pg__app-shop-group {
+  .storage-pg__select {
+    .select__self-wrap {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}
+
+.storage-pg__app-search-group {
+  .storage-pg__select {
+    .select__self-wrap {
+      width: 100vw;
+      max-width: 273px;
+    }
+  }
+}

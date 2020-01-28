@@ -1,0 +1,60 @@
+#sales-analytics-pg {
+}
+
+.sales-analytics-pg__app-group {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.sales-analytics-pg__app-subtitle {
+  margin-bottom: 20px;
+  color: #515159;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
+}
+
+.sales-analytics-pg__app-tabs {
+  display: inline-flex;
+  background: #fff;
+  border-radius: 22px;
+}
+
+.sales-analytics-pg__app-tab {
+  padding: 14px 12px;
+  color: #000;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  border-radius: 22px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &:not(.sales-analytics-pg__app-tab--active):hover {
+    background: lighten(#515159, 60%);
+  }
+
+  &--active {
+    color: #fff;
+    background: #515159;
+  }
+}
+
+// Mixes
+
+.sales-analytics-pg__page-title {
+  margin-bottom: 17px;
+}
+
+.sales-analytics-pg__select {
+  margin-bottom: 40px;
+
+  .select__self-wrap {
+    width: 100%;
+    max-width: 400px;
+  }
+}

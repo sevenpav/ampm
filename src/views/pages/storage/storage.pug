@@ -1,0 +1,31 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const { table } = require('./data.js')
+
+  #storage-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'storage-pg')
+    +page-title({ title: 'Склад', type: 'line' }, 'storage-pg')
+
+    .storage-pg__app
+      .storage-pg__app-shop-group
+        p.storage-pg__app-subtitle Магазин
+        +select({ items: ['ООО “АкваФорум Сити Компани”', 'Тест 1', 'Тест 2'], label: 'Магазин', button: 'Показать' }, 'storage-pg')
+      
+      .storage-pg__app-search-group
+        p.storage-pg__app-subtitle Поиск
+        .storage-pg__app-search
+          +select({ items: ['Категория', 'Тест 1', 'Тест 2'] }, 'storage-pg')
+          +select({ items: ['Коллекция', 'Тест 1', 'Тест 2'] }, 'storage-pg')
+          +input-text({ placeholder: 'Название' }, 'storage-pg')
+
+          +btn-normal({ label: 'Искать', type: 'gray' }, 'storage-pg')
+
+      .storage-pg__app-table-group
+        p.storage-pg__app-subtitle Список товаров на складе
+        +table({ thead: table.thead, tbody: table.tbody, withPagination: true }, 'storage-pg')
+

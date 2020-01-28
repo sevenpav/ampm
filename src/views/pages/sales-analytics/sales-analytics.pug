@@ -1,0 +1,34 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const { table } = require('./data.js')
+
+  #sales-analytics-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'sales-analytics-pg')
+    +page-title({ title: 'Аналитика продаж', type: 'line' }, 'sales-analytics-pg')
+
+    .sales-analytics-pg__app
+
+      +select({ label: 'Магазин', items: ['Все', 'Тест'] }, 'sales-analytics-pg')
+
+      .sales-analytics-pg__app-group
+        p.sales-analytics-pg__app-subtitle Показать продажи
+
+        .sales-analytics-pg__app-tabs
+          each tab, idx in ['За период', 'По категориям', 'По коллекциям', 'По акциям', 'По продавцам']
+            button.sales-analytics-pg__app-tab(class=(idx === 0) && 'sales-analytics-pg__app-tab--active')= tab
+
+      .sales-analytics-pg__app-group
+        p.sales-analytics-pg__app-subtitle Период
+
+        +btn-normal({ label: 'Сформировать отчет', type: 'gray' }, 'sales-analytics-pg')
+
+      .sales-analytics-pg__app-group
+        p.sales-analytics-pg__app-subtitle Список товаров на складе
+
+        +table({ thead: table.thead, tbody: table.tbody, withPagination: true }, 'sales-analytics-pg')
+
