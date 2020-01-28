@@ -1,14 +1,14 @@
 $(() => {
   const $page = $('#cart-pg')
 
-  if ($page.length) {
-    const $btnDownload = $('.cart-pg__btn-unpload', $page)
-    const $modalUpload = $('.modal-upload', $page)
-    const $darkBg = $('.dark-bg')
+  if (!$page.length) return
 
-    $btnDownload.click(() => {
-      $darkBg.addClass('dark-bg--show')
-      $modalUpload.addClass('modal--show')
-    })
-  }
+  const $btnDownload = $('.cart-pg__btn-unpload', $page)
+  const $modalUpload = $('.modal-upload', $page)
+  const $darkBg = $('.dark-bg')
+
+  $btnDownload.click(() => {
+    $darkBg.addClass('dark-bg--show')
+    $modalUpload.addClass('modal--show')
+  })
 })

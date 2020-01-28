@@ -1,6 +1,10 @@
 import Navigo from 'navigo'
 
 $(() => {
+  const $page = $('#learning-pg')
+
+  if (!$page.length) return
+
   const $steps = $('.learning-pg__step')
   const $intro = $('._intro')
 

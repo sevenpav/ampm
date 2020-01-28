@@ -1,5 +1,8 @@
 $(() => {
   const $radioBtn = $('.radio-btn')
+
+  if (!$radioBtn.length) return
+
   const $label = $('.radio-btn__label', $radioBtn)
 
   $label.on('change', function() {

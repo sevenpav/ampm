@@ -1,9 +1,11 @@
 import Tabs from 'assets/js/Tabs.js'
 
 $(() => {
-  const hash = window.location.hash
-
   const $courseTabs = $('.course-tabs')
+
+  if (!$courseTabs.length) return
+
+  const hash = window.location.hash
 
   const $tabs = $('.course-tabs__tab', $courseTabs)
 

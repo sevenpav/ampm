@@ -1,7 +1,12 @@
 import Navigo from 'navigo'
 
 $(() => {
+  const $page = $('#login-pg')
+
+  if (!$page.length) return
+
   const $forms = $('#login-pg > *')
+
   const $authForm = $('._auth')
   const $registrationForm = $('._registration')
   const $recoverForm = $('._recover')

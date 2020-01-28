@@ -1,6 +1,10 @@
 $(() => {
-  const $input = $('.input-password__input')
-  const $toggleBtn = $('.input-password__btn-toggle')
+  const $inputPassword = $('.input-password')
+
+  if (!$inputPassword.length) return
+
+  const $input = $('.input-password__input', $inputPassword)
+  const $toggleBtn = $('.input-password__btn-toggle', $inputPassword)
 
   $toggleBtn.click(() => {
     $toggleBtn.toggleClass('input-password__btn-toggle--show')

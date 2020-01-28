@@ -1,6 +1,8 @@
 $(() => {
   const $orderApp = $('.order-app')
 
+  if (!$orderApp.length) return
+
   const $deliveryTab = $('.order-app__delivery-tab', $orderApp)
 
   $deliveryTab.click(function() {

@@ -1,6 +1,10 @@
 import Tabs from 'assets/js/Tabs.js'
 
 $(() => {
+  const $bonusTabs = $('.bonus-tabs')
+
+  if (!$bonusTabs.length) return
+
   new Tabs({
     parentClass: 'bonus-tabs',
     tabs: 'bonus-tabs__tab-btn',
@@ -12,8 +16,6 @@ $(() => {
     tabs: 'bonus-tabs__sub-tab-btn',
     targetClass: 'bonus-tabs__sub-tab'
   }).init()
-
-  const $bonusTabs = $('.bonus-tabs')
 
   const $darkBg = $('.dark-bg')
   const $modalCategoryBonus = $('.modal-category-bonus')
