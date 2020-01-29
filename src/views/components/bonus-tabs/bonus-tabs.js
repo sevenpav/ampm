@@ -7,13 +7,13 @@ $(() => {
 
   new Tabs({
     parentClass: 'bonus-tabs',
-    tabs: 'bonus-tabs__tab-btn',
+    tabs: 'tabs__tab-btn',
     targetClass: 'bonus-tabs__tab'
   }).init()
 
   new Tabs({
     parentClass: 'bonus-tabs',
-    tabs: 'bonus-tabs__sub-tab-btn',
+    tabs: 'small-tabs__tab-btn',
     targetClass: 'bonus-tabs__sub-tab'
   }).init()
 

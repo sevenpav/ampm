@@ -1,0 +1,44 @@
+.small-tabs {
+  display: inline-flex;
+  background: #fff;
+  border-radius: 22px;
+}
+
+.small-tabs__tab-btn {
+  padding: 9px 16px;
+  color: #000;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  border-radius: 22px;
+  cursor: default;
+
+  &:not(.small-tabs__tab-btn--active):hover {
+    background: lighten($color: #515159, $amount: 60%);
+    cursor: pointer;
+  }
+
+  &--active {
+    color: #fff;
+    background: #515159;
+  }
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

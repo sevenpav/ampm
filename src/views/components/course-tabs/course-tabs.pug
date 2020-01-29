@@ -4,11 +4,13 @@ mixin course-tabs(mixes)
 
   .course-tabs(class=(mixes) && `${mixes}__course-tabs`)
     header.course-tabs__header
-      .course-tabs__tab-switch
-        each tab, idx in tabs
-          button.course-tabs__tab-btn(class=(idx === 0) && 'course-tabs__tab-btn--active' data-target=`${tab}`)= tab
-            if (idx === tabs.length - 1)
-              span.course-tabs__tab-btn-label 23
+      +tabs({ tabs }, 'course-tabs')
+
+      //- .course-tabs__tab-switch
+      //-   each tab, idx in tabs
+      //-     button.course-tabs__tab-btn(class=(idx === 0) && 'course-tabs__tab-btn--active' data-target=`${tab}`)= tab
+      //-       if (idx === tabs.length - 1)
+      //-         span.course-tabs__tab-btn-label 23
 
 
     .course-tabs__container

@@ -20,7 +20,7 @@ $(() => {
 
   new Tabs({
     parentClass: 'course-tabs',
-    tabs: 'course-tabs__tab-btn',
+    tabs: 'tabs__tab-btn',
     targetClass: 'course-tabs__tab'
   }).init()
 

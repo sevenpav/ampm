@@ -1,4 +1,5 @@
-mixin tabs(mixes)
+mixin tabs({ tabs }, mixes)
 
   .tabs(class=(mixes) && `${mixes}__tabs`)
-
+    each tab, idx in tabs
+      button.tabs__tab-btn(class=(idx === 0) && 'tabs__tab-btn--active' data-target=`${tab.target}`)!= tab.name

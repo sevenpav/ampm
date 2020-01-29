@@ -1,0 +1,18 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #reclamation-pg
+
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'reclamation-pg')
+    +small-tabs({ tabs: ['Рекламации', 'Акты сверок'] }, 'reclamation-pg')
+
+    header.reclamation-pg__header
+      +page-title({ title: 'Рекламации' }, 'reclamation-pg')
+      +btn-normal({ label: '+ Новая рекламация' }, 'reclamation-pg')
+

@@ -1,0 +1,5 @@
+mixin small-tabs({ tabs }, mixes)
+
+  .small-tabs(class=(mixes) && `${mixes}__small-tabs`)
+    each tab, idx in tabs
+      button.small-tabs__tab-btn(class=(idx === 0) && 'small-tabs__tab-btn--active' data-target=`${tab}`)= tab

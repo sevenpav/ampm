@@ -4,9 +4,9 @@ mixin bonus-tabs(mixes)
 
   .bonus-tabs(class=(mixes) && `${mixes}__bonus-tabs`)
     header.bonus-tabs__header
-      .bonus-tabs__tab-switch
-        each tab, idx in tabs
-          button.bonus-tabs__tab-btn(class=(idx === 0) && 'bonus-tabs__tab-btn--active' data-target=`${tab}`)= tab
+    
+      +tabs({ tabs }, 'bonus-tabs')
+
       .bonus-tabs__bonus-display
         p.bonus-tabs__bonus-display-label Доступно бонусов
         .bonus-tabs__bonus-display-num
@@ -28,10 +28,7 @@ mixin bonus-tabs(mixes)
 
       .bonus-tabs__tab(data-target='История')
 
-        .bonus-tabs__sub-tab-switch
-          .bonus-tabs__sub-tab-switch-flex-wrap
-            each tab, idx in ['Списание', 'Зачисление']
-              button.bonus-tabs__sub-tab-btn(class=(idx === 0) && 'bonus-tabs__sub-tab-btn--active' data-target=`${tab}`)= tab
+        +small-tabs({ tabs: ['Списание', 'Зачисление'] }, 'bonus-tabs')
 
         .bonus-tabs__sub-tab.bonus-tabs__sub-tab--show(data-target='Списание')
           +table(writeOffTable)

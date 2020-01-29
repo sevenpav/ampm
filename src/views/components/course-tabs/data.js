@@ -1,5 +1,18 @@
 module.exports = {
-  tabs: ['Описание курса', 'Прохождение курса', 'Тесты'],
+  tabs: [
+    {
+      name: 'Описание курса',
+      target: 'Описание курса'
+    },
+    {
+      name: 'Прохождение курса',
+      target: 'Прохождение курса'
+    },
+    {
+      name: 'Тесты <span class="tabs__tab-btn-label">23</span>',
+      target: 'Тесты'
+    }
+  ],
   testDesc: `
     <p class="text text-subtitle">Название теста:</p>
     <p class="text">Тест по бренду AM.PM</p>

@@ -15,48 +15,6 @@
   margin-bottom: 23px;
 }
 
-.course-tabs__tab-switch {
-  display: flex;
-  background: #fff;
-  border-radius: 22px;
-}
-
-.course-tabs__tab-btn {
-  padding: 16px;
-  color: #000;
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: 0.25px;
-  text-transform: uppercase;
-  border-radius: 22px;
-
-  &:not(:last-child) {
-    margin-right: 8px;
-  }
-
-  &--active {
-    color: #fff;
-    background: #515159;
-
-    .course-tabs__tab-btn-label {
-      color: #515159;
-      background: #fff;
-    }
-  }
-}
-
-.course-tabs__tab-btn-label {
-  margin-left: 3px;
-  padding: 2px 3px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: 0.25px;
-  text-transform: uppercase;
-  background: #8a8c9b;
-  border-radius: 8px;
-}
-
 .course-tabs__tab {
   display: none;
   flex-direction: column;
