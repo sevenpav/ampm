@@ -4,6 +4,7 @@
   left: 50%;
   z-index: 10002;
   display: none;
+  max-height: calc(100vh - 48px);
   padding: 20px 24px 24px;
   background: #fff;
   border-radius: 12px;
@@ -36,6 +37,10 @@
 
 .modal__header-icon {
   margin-right: 16px;
+}
+
+.modal__scroll-wrap {
+  overflow-y: auto;
 }
 
 // Media queries

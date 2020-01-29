@@ -8,9 +8,11 @@ mixin modal-cart(mixes)
 
       +btn-close({}, 'modal')
 
-    .modal-cart__list
-      each item in [1, 2, 3, 4]
-        +cart-item({ item }, 'modal-cart')
+    .modal__scroll-wrap
+
+      .modal-cart__list
+        each item in [1, 2, 3, 4]
+          +cart-item({ item }, 'modal-cart')
         
     footer.modal-cart__footer
       .modal-cart__footer-btn-group

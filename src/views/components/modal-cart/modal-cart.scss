@@ -22,6 +22,10 @@
 }
 
 @include less-md {
+  .modal-cart {
+    width: 100vw;
+    max-width: calc(100vw - 64px);
+  }
 }
 
 @include less-sm {
