@@ -4,17 +4,24 @@ mixin header({ isAuth }, mixes)
 
   header.header(class=(mixes) && `${mixes}__header`)
     .header__wrap
-      a.header__logo-link(href='catalog.html')
-        img.header__logo(src=require('public/img/logo.svg') alt='Логотип AMPM')
-      nav.header__nav
-        each link, idx in links
-          span.header__link-wrap(class=(link.modifier) && `${link.modifier}`)
-            a.header__link(class=(idx === 0) && 'header__link--active' href=`${link.href}`)= link.name
-      
+      span.header__hamburger-btn
+        each line in [1, 2, 3]
+          span
 
+
+      .header__mobile-wrap
+        header.header__mobile-wrap-header
+          +btn-close({}, 'header')
+          a.header__logo-link(href='catalog.html')
+            img.header__logo(src=require('public/img/logo.svg') alt='Логотип AMPM')
+
+        nav.header__nav
+          each link, idx in links
+            span.header__link-wrap(class=(link.modifier) && `${link.modifier}`)
+              a.header__link(class=(idx === 0) && 'header__link--active' href=`${link.href}`)= link.name
       
-      .header__bar
         +search({ isOpen: !isAuth }, 'header')
+      .header__bar
 
         if (isAuth)
           .header__profile
@@ -38,7 +45,7 @@ mixin header({ isAuth }, mixes)
         else
           a.header__login-link(href='login.html#auth')
             img.header__login-icon(src=require('views/components/header/img/login.svg') alt='Иконка логина')
-            | Авторизация
+            span.header__login-label Авторизация
 
 
     +catalog-menu('header')

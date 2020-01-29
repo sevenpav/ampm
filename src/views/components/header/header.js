@@ -2,7 +2,21 @@ $(() => {
   const $header = $('.header')
   const $profile = $('.header__profile', $header)
 
-  const $profileMenu = $('.header__profile-menu')
+  const $hamburgerBtn = $('.header__hamburger-btn', $header)
+  const $closeBtn = $('.header__btn-close', $header)
+  const $darkBg = $('.dark-bg')
+
+  const $profileMenu = $('.header__profile-menu', $header)
+
+  $hamburgerBtn.click(() => {
+    $header.addClass('header--mobile')
+    $darkBg.addClass('dark-bg--show')
+  })
+
+  $closeBtn.click(() => {
+    $header.removeClass('header--mobile')
+    $darkBg.removeClass('dark-bg--show')
+  })
 
   $profile.hover(
     () => {
@@ -18,7 +32,6 @@ $(() => {
   const $catalogMenu = $('.catalog-menu', $header)
 
   const $cartLink = $('.header__cart-link', $header)
-  const $darkBg = $('.dark-bg')
   const $modalCart = $('.modal-cart')
 
   $catalogLink.add($catalogMenu).hover(
