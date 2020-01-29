@@ -40,6 +40,10 @@
 }
 
 @include less-sm {
+  .modal-upload {
+    width: 100vw;
+    max-width: calc(100vw - 64px);
+  }
 }
 
 // Mixes

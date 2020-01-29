@@ -47,6 +47,10 @@
 }
 
 @include less-md {
+  .modal {
+    width: 100vw;
+    max-width: calc(100vw - 64px);
+  }
 }
 
 @include less-sm {

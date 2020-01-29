@@ -1,25 +1,27 @@
 mixin cart-item({ isOrder }, mixes)
 
   .cart-item(class=(mixes) && `${mixes}__cart-item`)
-    .cart-item__product-img-container
-      img.cart-item__product-img(src=require('views/components/cart-item/img/item.png') alt='Изображение товара')
+    .cart-item__product-info-group
+      .cart-item__product-img-container
+        img.cart-item__product-img(src=require('views/components/cart-item/img/item.png') alt='Изображение товара')
 
-    .cart-item__product-info
-      p.cart-item__collection-name Gem
-      p.cart-item__product-name Унитаз-компакт с сиденьем микролифт Lorem ipsum
-      .cart-item__product-sub-info
-        p.cart-item__product-num C908607SC
-        p.cart-item__product-amount На складе 40 шт.
+      .cart-item__product-info
+        p.cart-item__collection-name Gem
+        p.cart-item__product-name Унитаз-компакт с сиденьем микролифт Lorem ipsum
+        .cart-item__product-sub-info
+          p.cart-item__product-num C908607SC
+          p.cart-item__product-amount На складе 40 шт.
 
-    if (isOrder)
-      span.cart-item__count 19 шт.
-
-    else
-      .cart-item__btn-count-group
-        button.cart-item__btn-sub
-          img.cart-item__icon-minus(src=require('views/components/cart-item/img/icon-minus.svg') alt='Иконка')
+    .cart-item__control-group
+      if (isOrder)
         span.cart-item__count 19 шт.
-        button.cart-item__btn-add
-          img.cart-item__icon-plus(src=require('views/components/cart-item/img/icon-plus.svg') alt='Иконка')
 
-    p.cart-item__sum 888 990 ₽
+      else
+        .cart-item__btn-count-group
+          button.cart-item__btn-sub
+            img.cart-item__icon-minus(src=require('views/components/cart-item/img/icon-minus.svg') alt='Иконка')
+          span.cart-item__count 19 шт.
+          button.cart-item__btn-add
+            img.cart-item__icon-plus(src=require('views/components/cart-item/img/icon-plus.svg') alt='Иконка')
+
+      p.cart-item__sum 888 990 ₽

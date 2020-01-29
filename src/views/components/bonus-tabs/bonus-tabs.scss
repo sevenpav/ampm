@@ -110,7 +110,8 @@
 .bonus-tabs__category-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  margin-right: -45px;
   margin-bottom: -45px;
 }
 
@@ -123,15 +124,50 @@
 }
 
 @include less-md {
+  .bonus-tabs__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bonus-tabs__tabs {
+    margin-bottom: 16px;
+  }
+
+  .bonus-tabs__bonus-display {
+    align-self: flex-end;
+  }
 }
 
 @include less-sm {
+  .bonus-tabs__header {
+    align-items: stretch;
+  }
+
+  .bonus-tabs__tabs {
+    flex-direction: column;
+    .tabs__tab-btn {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .bonus-tabs__bonus-display {
+    align-self: auto;
+    min-width: auto;
+    padding: 0 16px;
+  }
+
+  .bonus-tabs__bonus-display-label {
+    margin-right: 4px;
+  }
 }
 
 // Mixes
 
 .bonus-tabs__category-bonus-item {
   max-width: 350px;
+  margin-right: 45px;
   margin-bottom: 45px;
 }
 

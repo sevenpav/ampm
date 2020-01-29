@@ -28,7 +28,7 @@ mixin cart-app(mixes)
         each item in [1, 2, 3, 4]
           li.cart-app__item
             +checkbox({}, 'cart-app')
-            +cart-item('cart-app')
+            +cart-item({}, 'cart-app')
             +btn-close({}, 'cart-app')
 
 

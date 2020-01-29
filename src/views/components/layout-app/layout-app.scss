@@ -5,6 +5,7 @@
 .layout-app__display {
   width: 100%;
   max-width: 850px;
+  margin-right: 16px;
 }
 
 .layout-app__result {
@@ -81,6 +82,21 @@
 }
 
 @include less-lg {
+  .layout-app {
+    flex-direction: column;
+  }
+
+  .layout-app__display {
+    order: 1;
+    margin-right: 0;
+  }
+
+  .layout-app__result {
+    order: 0;
+    max-width: 480px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
 }
 
 @include less-md {

@@ -34,6 +34,32 @@
   text-transform: uppercase;
 }
 
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+  .cart-pg__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-pg__page-title {
+    margin-bottom: 8px;
+  }
+
+  .cart-pg__btn-unpload {
+    align-self: flex-end;
+  }
+}
+
 // Mixes
 
 .cart-pg__product-list {

@@ -1,30 +1,31 @@
 mixin table({ thead, tbody, withPagination }, mixes)
 
   .table(class=(mixes) && `${mixes}__table`)
-    table.table__self
-      thead.table__thead
-        tr
-          each td in thead
-            td= td
-
-      tbody.table__tbody
-        each tr in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    .table__scroll-wrap
+      table.table__self
+        thead.table__thead
           tr
-            each td in tbody
-              td!= td
+            each td in thead
+              td= td
 
-    if (withPagination)
-    
-      footer.table__footer
-        .table__select-output
-          each val, idx in [10, 25, 50]
-            button.table__select-val(class=(idx === 0) && 'table__select-val--active')= val
+        tbody.table__tbody
+          each tr in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            tr
+              each td in tbody
+                td!= td
 
-        .table__pagination
-          button.table__btn-prev
-            img.table__icon-arrow(src=require('views/components/table/img/i-arrow.svg') alt='Иконка')
-          .table__pagination-list
-            each val, idx in [1, 2, 3, 4, 5]
-              button.table__btn-page(class=(idx === 0) && 'table__btn-page--active')= val
-          button.table__btn-next
-            img.table__icon-arrow(src=require('views/components/table/img/i-arrow.svg') alt='Иконка')
+      if (withPagination)
+      
+        footer.table__footer
+          .table__select-output
+            each val, idx in [10, 25, 50]
+              button.table__select-val(class=(idx === 0) && 'table__select-val--active')= val
+
+          .table__pagination
+            button.table__btn-prev
+              img.table__icon-arrow(src=require('views/components/table/img/i-arrow.svg') alt='Иконка')
+            .table__pagination-list
+              each val, idx in [1, 2, 3, 4, 5]
+                button.table__btn-page(class=(idx === 0) && 'table__btn-page--active')= val
+            button.table__btn-next
+              img.table__icon-arrow(src=require('views/components/table/img/i-arrow.svg') alt='Иконка')

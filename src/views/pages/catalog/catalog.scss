@@ -10,8 +10,34 @@
 .catalog-pg__items-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  margin-right: -45px;
   margin-bottom: -45px;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+  .catalog-pg__header {
+    flex-direction: column;
+  }
+
+  .catalog-pg__page-title {
+    margin-bottom: 8px;
+  }
+
+  .catalog-pg__btn-unpload {
+    align-self: flex-end;
+  }
 }
 
 // Mixes
@@ -19,5 +45,6 @@
 .catalog-pg__category-item {
   width: 100%;
   max-width: 350px;
+  margin-right: 45px;
   margin-bottom: 45px;
 }
