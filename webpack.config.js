@@ -174,6 +174,12 @@ const config = {
   },
   plugins: [
     ...instance,
+    // new HtmlWebpackPlugin({
+    //   template: 'views/pages/catalog/catalog.pug',
+    //   filename: 'catalog.html',
+    //   chunks: ['bundle', 'catalog'],
+    //   minify: !isDev
+    // }),
     new webpack.ProvidePlugin({
       $: 'jquery'
     }),

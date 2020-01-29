@@ -11,15 +11,12 @@ mixin header({ isAuth }, mixes)
           span.header__link-wrap(class=(link.modifier) && `${link.modifier}`)
             a.header__link(class=(idx === 0) && 'header__link--active' href=`${link.href}`)= link.name
       
-      if (!isAuth)
-        //- +search({ isOpen: true }, 'header')
 
+      
       .header__bar
-        if (isAuth)
-          //- button.header__search-btn
-          //-   img.header__seatch-icon(src=require('public/img/icon-loupe.svg') alt='Иконка поиска')
-          //- +search({ isOpen: false }, 'header')
+        +search({ isOpen: !isAuth }, 'header')
 
+        if (isAuth)
           .header__profile
             .header__profile-menu
               ul.header__profile-menu-list
@@ -30,9 +27,9 @@ mixin header({ isAuth }, mixes)
                       = link.name
             .header__avatar
               img.header__avatar-img(src=require('views/components/header/img/avatar.png') alt='Аватар')
-            .header__profile-info
-              p.header__profile-name Сергей Фролов
-                img.header__profile-icon-more(src=require('views/components/header/img/arrow-down.svg') alt='Иконка выпадающего меню')
+            .header__profile-name-group
+              span.header__profile-name Сергей Фролов
+              img.header__profile-icon-more(src=require('views/components/header/img/arrow-down.svg') alt='Иконка выпадающего меню')
           
           a.header__cart-link(href='#')
             img.header__cart-icon(src=require('views/components/header/img/cart.svg') alt='Иконка корзины')

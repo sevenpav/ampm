@@ -47,7 +47,7 @@ body {
     color: #8a8c9b;
   }
 
-  p:not(.subtitle) + p {
+  p:not(.subtitle):not(.text-subtitle) + p {
     margin-top: 27px;
   }
 }
