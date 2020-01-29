@@ -46,6 +46,10 @@ body {
     margin-bottom: 8px;
     color: #8a8c9b;
   }
+
+  p:not(.subtitle) + p {
+    margin-top: 27px;
+  }
 }
 
 .content-table {
