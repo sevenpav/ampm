@@ -1,0 +1,15 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #new-reclamation-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты']}, 'new-reclamation-pg')
+    +page-title({ title: 'Новая рекламация', type: 'line' }, 'new-reclamation-pg')
+
+    +new-reclamation-app
+

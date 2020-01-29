@@ -1,6 +1,6 @@
-mixin registration-form({ hash }, mixes)
+mixin registration-form(mixes)
 
-  form.registration-form(class=`_${hash}` class=(mixes) && `${mixes}__registration-form`)
+  form.registration-form(class=(mixes) && `${mixes}__registration-form`)
 
     header.registration-form__header
       h1.registration-form__title Регистрация

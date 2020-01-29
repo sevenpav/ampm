@@ -1,6 +1,6 @@
-mixin recover-form({ hash }, mixes)
+mixin recover-form(mixes)
 
-  form.recover-form(class=`_${hash}` class=(mixes) && `${mixes}__recover-form`)
+  form.recover-form(class=(mixes) && `${mixes}__recover-form`)
     h1.recover-form__title Восстановление пароля
     p.recover-form__desc Введите e-mail, указанный при регистрации, чтобы получить письмо с новым паролем
 

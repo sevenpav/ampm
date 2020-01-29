@@ -69,7 +69,7 @@ const config = {
       {
         test: /\.pug$/,
         use: [
-          'cache-loader',
+          // 'cache-loader',
           {
             loader: 'pug-loader',
             options: {

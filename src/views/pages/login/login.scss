@@ -7,18 +7,16 @@
 
 #login-pg {
   .login-pg__login-form {
-    width: 100%;
+    width: 100vw;
     max-width: 344px;
   }
 
   .login-pg__recover-form {
-    display: none;
     max-width: 344px;
   }
 
   .login-pg__registration-form {
-    display: none;
-    width: 100%;
+    width: 100vw;
     max-width: 344px;
   }
 }

@@ -9,13 +9,16 @@ block content
 
   #login-pg
 
-    +login-form({ hash: 'auth' }, 'login-pg')
+    .login-pg__form-container
 
-    +recover-form({ hash: 'recover' }, 'login-pg')
+    template#auth
+      +login-form( 'login-pg')
 
-    +registration-form({ hash: 'registration' }, 'login-pg')
+    template#recover
+      +recover-form('login-pg')
 
-
+    template#registration
+      +registration-form('login-pg')
 
 
 

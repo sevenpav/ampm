@@ -1,6 +1,6 @@
-mixin login-form({ hash }, mixes)
+mixin login-form(mixes)
 
-  form.login-form(class=`_${hash}` class=(mixes) && `${mixes}__login-form`)
+  form.login-form(class=(mixes) && `${mixes}__login-form`)
 
     h1.login-form__title Авторизация
 

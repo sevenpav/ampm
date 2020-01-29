@@ -27,8 +27,8 @@ $(() => {
   new Tabs({
     parentClass: 'course-tabs',
     $tabs: $('.course-tabs__footer .course-tabs__btn-normal'),
-    activeClass: 'course-tabs__tab-btn--active',
+    activeClass: 'tabs__tab-btn--active',
     targetClass: 'course-tabs__tab',
-    targetActiveClass: 'course-tabs__tab-btn'
+    targetActiveClass: 'tabs__tab-btn'
   }).init()
 })

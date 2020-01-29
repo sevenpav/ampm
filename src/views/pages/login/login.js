@@ -5,31 +5,26 @@ $(() => {
 
   if (!$page.length) return
 
-  const $forms = $('#login-pg > *')
-
-  const $authForm = $('._auth')
-  const $registrationForm = $('._registration')
-  const $recoverForm = $('._recover')
+  const formContainer = document.querySelector('.login-pg__form-container')
 
   const root = null
   const useHash = true
   const hash = '#'
   const router = new Navigo(root, useHash, hash)
 
+  const { registration, recover, auth } = window
+
+  const routerHandler = tmpl => () => {
+    formContainer.innerHTML = ''
+
+    formContainer.appendChild(tmpl.content.cloneNode(true))
+  }
+
   router
     .on({
-      registration: () => {
-        $forms.not($registrationForm).hide()
-        $registrationForm.css('display', 'flex')
-      },
-      recover: () => {
-        $forms.not($recoverForm).hide()
-        $recoverForm.css('display', 'flex')
-      },
-      '*': () => {
-        $forms.not($authForm).hide()
-        $authForm.css('display', 'flex')
-      }
+      registration: routerHandler(registration),
+      recover: routerHandler(recover),
+      '*': routerHandler(auth)
     })
     .resolve()
 })
