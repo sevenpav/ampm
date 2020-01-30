@@ -109,7 +109,7 @@ const config = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: [
-          // 'cache-loader',
+          'cache-loader',
           'thread-loader',
           {
             loader: 'babel-loader',
