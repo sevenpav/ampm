@@ -42,7 +42,7 @@ $(() => {
       const synth = window.speechSynthesis
 
       const utterThis = new SpeechSynthesisUtterance(
-        'Вы не можете оставить меньше одной номенклатуры.'
+        'Вы не можете оставить меньше одной рекламации.'
       )
 
       synth.speak(utterThis)

@@ -31,7 +31,7 @@ mixin order-app(mixes)
             .order-app__delivery-form-group
               p.order-app__delivery-form-label Способ отгрузки
               .order-app__delivery-radio-btns
-                +radio-btn({ label: 'На склад' }, 'order-app')
+                +radio-btn({ label: 'На склад', isChecked: true }, 'order-app')
                 +radio-btn({ label: 'Самовывоз' }, 'order-app')
 
             .order-app__delivery-form-group
