@@ -9,6 +9,14 @@ body {
   overflow: hidden;
   font-family: 'TondoCorp', sans-serif;
   background: $bg-color;
+
+  > .container {
+    margin-bottom: 80px;
+  }
+}
+
+.mb-none {
+  margin-bottom: 0;
 }
 
 .container {

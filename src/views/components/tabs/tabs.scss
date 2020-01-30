@@ -20,11 +20,17 @@
   &--active {
     color: #fff;
     background: #515159;
+    cursor: default;
 
     .tabs__tab-btn-label {
       color: #515159;
       background: #fff;
     }
+  }
+
+  &:not(.tabs__tab-btn--active):hover {
+    background: lighten($color: #515159, $amount: 60%);
+    cursor: pointer;
   }
 }
 

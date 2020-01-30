@@ -50,6 +50,10 @@
 .table-orders__tbody {
   tr {
     cursor: pointer;
+
+    &:hover {
+      background: darken(#f7f9fd, 2%);
+    }
   }
 }
 
