@@ -1,0 +1,74 @@
+.textarea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 93px;
+
+  &--error {
+    .textarea__label {
+      color: #ff001f;
+    }
+  }
+
+  &--bg {
+    .textarea__self {
+      background: #f7f9fd;
+    }
+  }
+}
+
+.textarea__self {
+  flex-grow: 1;
+  width: 100%;
+  padding: 10px 18px;
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  resize: none;
+
+  &::placeholder {
+    color: #8a8c9b;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.25px;
+  }
+
+  &:not(:placeholder-shown) + .textarea__label,
+  &:focus + .textarea__label {
+    top: -4px;
+    opacity: 1;
+  }
+}
+
+.textarea__label {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  color: #8a8c9b;
+  font-size: 10px;
+  line-height: 1;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

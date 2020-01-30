@@ -1,53 +1,12 @@
 #reclamation-pg {
 }
 
-.reclamation-pg__container {
-  display: flex;
-}
-
-.reclamation-pg__title {
-  margin-bottom: 20px;
-  color: #515159;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: 0.15px;
-}
-
-.reclamayion-pg__l-side {
-  width: 100%;
-  max-width: 658px;
-  margin-right: 16px;
-
-  .reclamation-pg__display {
-    &:not(:last-child) {
-      margin-bottom: 28px;
-    }
-  }
-}
-
-.reclamayion-pg__r-side {
-  flex-grow: 1;
-}
-
 // Media queries
 
 @include less-xl {
 }
 
 @include less-lg {
-  .reclamation-pg__container {
-    flex-direction: column;
-
-    > * {
-      max-width: none;
-    }
-  }
-
-  .reclamayion-pg__l-side {
-    margin-right: 0;
-    margin-bottom: 28px;
-  }
 }
 
 @include less-md {

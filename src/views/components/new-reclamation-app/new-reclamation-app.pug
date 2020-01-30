@@ -2,3 +2,38 @@ mixin new-reclamation-app(mixes)
 
   .new-reclamation-app(class=(mixes) && `${mixes}__new-reclamation-app`)
 
+    header.new-reclamation-app__header
+      +page-title({ title: 'Новая рекламация' }, 'new-reclamation-pg')
+      +btn-normal({ label: 'Отправить', type: 'gray' }, 'new-reclamation-app')
+
+    .layout-app-2
+      .layout-app-2__l-side
+        .layout-app-2__display
+          h4.layout-app-2__title Номенклатура
+          .content-display
+            header.content-display__header
+              +btn-close({}, 'new-reclamation-app')
+            .new-reclamation-app__nomenclature
+              +input-text({ placeholder: 'Название продукта', type: 'bg' }, 'new-reclamation-app')
+              +textarea({ placeholder: 'Название продукта', type: 'bg' }, 'new-reclamation-app')
+              +textarea({ placeholder: 'Название продукта', type: 'bg' }, 'new-reclamation-app')
+              +input-file({ placeholder: 'Фотография', type: 'bg' }, 'new-reclamation-app')
+            
+              +btn-normal({ label: '+  Добавить позицию', type: 'outline' }, 'new-reclamation-app')
+
+            
+
+      .layout-app-2__r-side
+        .layout-app-2__display
+          h4.layout-app-2__title Данные накладной
+          .content-display
+            .new-reclamation-app__data
+              +input-text({ placeholder: 'Номер отгрузочной накладной', type: 'bg' }, 'new-reclamation-app')
+              +select({ items: ['Выберите контрагента', 'Тест 1', 'Тест 2'], type: 'bg' }, 'new-reclamation-app')
+              
+              .new-reclamation-app__radio-btns-group
+                p.new-reclamation-app__radio-btns-title Местонахождение товара
+                .new-reclamation-app__radio-btns
+                  +radio-btn({ label: 'На складе дилера', isChecked: true }, 'new-reclamation-app')
+                  +radio-btn({ label: 'У конечного потребителя' }, 'new-reclamation-app')
+

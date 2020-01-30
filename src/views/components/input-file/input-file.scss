@@ -13,6 +13,12 @@
       opacity: 1;
     }
   }
+
+  &--bg {
+    .input-file__self {
+      background: #f7f9fd;
+    }
+  }
 }
 
 .input-file__self {

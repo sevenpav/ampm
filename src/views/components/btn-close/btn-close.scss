@@ -1,7 +1,9 @@
 .btn-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px;
   cursor: pointer;
-  @include flex-center;
 
   &--round {
     border: 1px solid #000;

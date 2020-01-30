@@ -1,6 +1,6 @@
-mixin input-file({ placeholder }, mixes)
+mixin input-file({ placeholder, type }, mixes)
 
-  .input-file(class=(mixes) && `${mixes}__input-file`)
+  .input-file(class=(mixes) && `${mixes}__input-file` class=(type === 'bg') && 'input-file--bg')
     .input-file__self
       input.input-file__input(id='file-upload' type='file' name='file-upload')
 

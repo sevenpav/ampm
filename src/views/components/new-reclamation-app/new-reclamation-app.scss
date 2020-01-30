@@ -1,27 +1,101 @@
 .new-reclamation-app {
-  
+}
+
+.new-reclamation-app__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e1e5ef;
+}
+
+.new-reclamation-app__nomenclature {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    &:not(:last-child):not(.new-reclamation-app__input-file) {
+      margin-bottom: 34px;
+    }
+  }
+}
+
+.new-reclamation-app__data {
+  margin-top: 18px;
+
+  > * {
+    &:not(:last-child):not(.new-reclamation-app__select) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.new-reclamation-app__radio-btns-group {
+  margin-left: 18px;
+}
+
+.new-reclamation-app__radio-btns-title {
+  margin-bottom: 8px;
+  color: #8a8c9b;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.4px;
+}
+
+.new-reclamation-app__radio-btns {
+  display: flex;
+  align-items: center;
+
+  > * {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
 }
 
 // Media queries
 
 @include less-xl {
-
 }
 
 @include less-lg {
-  
 }
 
 @include less-md {
-  
 }
 
 @include less-sm {
-  
+  .new-reclamation-app__radio-btns {
+    flex-direction: column;
+    align-items: flex-start;
+
+    > * {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 4px;
+      }
+    }
+  }
 }
 
 // Mixes
 
+.new-reclamation-app__nomenclature {
+  .new-reclamation-app__btn-normal {
+    align-self: center;
+    margin-top: 24px;
+  }
+}
+
+.new-reclamation-app__data {
+  .new-reclamation-app__select {
+    margin-bottom: 16px;
+
+    .select__self-wrap {
+      width: 100%;
+    }
+  }
+}
 
 // Animation
- 

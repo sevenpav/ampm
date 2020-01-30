@@ -1,0 +1,5 @@
+mixin textarea({ placeholder, type }, mixes)
+
+  .textarea(class=(mixes) && `${mixes}__textarea` class=(type === 'bg') && 'textarea--bg')
+    textarea.textarea__self(placeholder=`${placeholder}`)
+    label.textarea__label= placeholder

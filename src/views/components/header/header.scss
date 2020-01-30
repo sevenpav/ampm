@@ -7,6 +7,7 @@
   transition: none;
 
   &--mobile {
+    z-index: 10002;
     background: transparent;
 
     .header__mobile-wrap {
@@ -250,7 +251,6 @@
 
 @include less-lg {
   .header {
-    z-index: 10002;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -301,10 +301,6 @@
 
   .header__profile {
     margin: 0 16px;
-  }
-
-  .header__avatar {
-    // margin: 12px 0;
   }
 
   .header__profile-name-group {

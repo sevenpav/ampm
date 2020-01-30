@@ -42,6 +42,10 @@ body {
   background: #fff;
   border-radius: 12px;
 
+  .btn-close {
+    margin-left: auto;
+  }
+
   .subtitle {
     margin-bottom: 8px;
     color: #8a8c9b;
@@ -52,6 +56,15 @@ body {
   }
 }
 
+.content-display__header {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.content-display__footer {
+  display: flex;
+}
+
 .content-table__scroll-wrap {
   margin-bottom: -16px;
   padding-bottom: 16px;
@@ -59,6 +72,7 @@ body {
 }
 
 .content-table {
+  width: 100%;
   color: #000;
   font-size: 14px;
   line-height: 1;
@@ -77,6 +91,7 @@ body {
       }
 
       &:last-child {
+        text-align: right;
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
       }
@@ -114,4 +129,48 @@ body {
 
 .bold {
   font-weight: 700;
+}
+
+.layout-app-2 {
+  display: flex;
+
+  @include less-lg {
+    flex-direction: column;
+  }
+}
+
+.layout-app-2__l-side {
+  width: 100%;
+  max-width: 658px;
+  margin-right: 16px;
+
+  @include less-lg {
+    order: 1;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  .layout-app-2__display {
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.layout-app-2__r-side {
+  flex-grow: 1;
+
+  @include less-lg {
+    max-width: 480px;
+    margin-bottom: 28px;
+  }
+}
+
+.layout-app-2__title {
+  margin-bottom: 20px;
+  color: #515159;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.15px;
 }
