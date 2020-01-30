@@ -12,7 +12,8 @@ const updateImports = () => {
 
   appendFileSync(
     `${dirs.views}/_imports.js`,
-    'import \'../assets/scss/common.scss\'\n'
+    `import '../assets/js/common.js'
+import '../assets/scss/common.scss'\n`
   )
 
   const writeImports = (name, isPage) => {

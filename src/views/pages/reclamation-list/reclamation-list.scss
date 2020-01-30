@@ -7,6 +7,27 @@
   margin-bottom: 17px;
 }
 
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+  .reclamation-list-pg__header {
+    flex-direction: column;
+  }
+
+  .reclamation-list-pg__page-title {
+    margin-bottom: 16px;
+  }
+}
+
 // Mixes
 
 .reclamation-list-pg__small-tabs {

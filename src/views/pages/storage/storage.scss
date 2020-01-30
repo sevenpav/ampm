@@ -29,6 +29,23 @@
   }
 }
 
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+  .storage-pg__app-search {
+    flex-direction: column;
+  }
+}
+
 // Mixes
 
 .storage-pg__page-title {
@@ -40,6 +57,10 @@
     .select__self-wrap {
       width: 100%;
       max-width: 400px;
+
+      @include less-sm {
+        max-width: none;
+      }
     }
   }
 }
@@ -49,6 +70,11 @@
     .select__self-wrap {
       width: 100vw;
       max-width: 273px;
+
+      @include less-sm {
+        width: 100%;
+        max-width: none;
+      }
     }
   }
 

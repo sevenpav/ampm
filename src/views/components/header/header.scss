@@ -258,7 +258,6 @@
   }
 
   .header__wrap {
-    padding: 12px 31px;
   }
 
   .header__mobile-wrap {
@@ -297,8 +296,17 @@
     margin: 0 16px;
   }
 
+  .header__avatar {
+    margin: 12px 0;
+  }
+
   .header__profile-name-group {
     display: none;
+  }
+
+  .header__profile-menu {
+    right: 50%;
+    transform: translateX(50%);
   }
 
   .header__bar {

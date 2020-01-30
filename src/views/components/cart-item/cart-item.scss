@@ -43,6 +43,7 @@
 
 .cart-item__product-sub-info {
   display: flex;
+  align-items: center;
   color: rgba(#8a8c9b, 0.5);
   font-size: 13px;
   line-height: 24px;
@@ -122,10 +123,10 @@
   }
 
   .cart-item__btn-count-group {
-    margin-bottom: 16px;
   }
 
   .cart-item__sum {
+    margin-top: 16px;
     margin-left: 0;
   }
 }
@@ -178,11 +179,8 @@
     flex-direction: column;
   }
 
-  .cart-item__btn-count-group {
-    margin-bottom: 16px;
-  }
-
   .cart-item__sum {
+    margin-top: 16px;
     margin-left: 0;
   }
 }

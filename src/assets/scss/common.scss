@@ -52,6 +52,12 @@ body {
   }
 }
 
+.content-table__scroll-wrap {
+  margin-bottom: -16px;
+  padding-bottom: 16px;
+  overflow-x: auto;
+}
+
 .content-table {
   color: #000;
   font-size: 14px;

@@ -1,3 +1,4 @@
+import '../assets/js/common.js'
 import '../assets/scss/common.scss'
 import './pages/bonus/bonus'
 import './pages/bonus/bonus.scss'

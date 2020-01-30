@@ -58,6 +58,14 @@
 }
 
 @include less-sm {
+  .select__wrap {
+    flex-direction: column;
+  }
+
+  .select__btn-normal.btn-normal {
+    margin-top: 16px;
+    margin-left: 0;
+  }
 }
 
 // Mixes

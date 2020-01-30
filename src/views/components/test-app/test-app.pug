@@ -43,16 +43,17 @@ mixin test-app({ result }, ixes)
         p.test-app__title.test-app__title--wrong Тест не сдан
         
         .content-display
-          table.content-table.test-app__table
-            tr
-              td Количество вопросов
-              td 10
-            tr
-              td Количество правильных ответов
-              td 6
-            tr
-              td.bold Выполнение теста завершено.
-              td
+          .content-table__scroll-wrap
+            table.content-table.test-app__table
+              tr
+                td Количество вопросов
+                td 10
+              tr
+                td Количество правильных ответов
+                td 6
+              tr
+                td.bold Выполнение теста завершено.
+                td
             
 
     if (!result)

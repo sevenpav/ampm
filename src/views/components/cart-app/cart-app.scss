@@ -92,6 +92,19 @@
     align-self: flex-end;
     margin-top: 16px;
   }
+
+  .cart-app__modal-empty-footer {
+    flex-direction: column;
+
+    .cart-app__btn-normal.btn-normal {
+      max-width: none;
+
+      &:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+    }
+  }
 }
 
 // Mixes
@@ -126,7 +139,7 @@
     width: 100%;
     max-width: 141px;
 
-    &:not(last-child) {
+    &:not(:last-of-type) {
       margin-right: 21px;
     }
   }

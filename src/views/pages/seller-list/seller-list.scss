@@ -7,6 +7,34 @@
   margin-bottom: 24px;
 }
 
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+  .seller-list-pg__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .seller-list-pg__page-title {
+    margin-bottom: 16px;
+  }
+
+  .seller-list-pg__header {
+    .seller-list-pg__btn-normal {
+      width: 100%;
+    }
+  }
+}
+
 // Mixes
 
 .seller-list-pg__header {

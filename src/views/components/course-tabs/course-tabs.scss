@@ -64,6 +64,32 @@
 }
 
 @include less-sm {
+  .course-tabs__header {
+    width: 100%;
+  }
+
+  .course-tabs__tabs {
+    flex-direction: column;
+    width: 100%;
+
+    .tabs__tab-btn {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .course-tabs__footer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .course-tabs__btn-normal.btn-normal {
+    + .course-tabs__btn-normal {
+      margin-top: 8px;
+      margin-left: 0;
+    }
+  }
 }
 
 // Mixes

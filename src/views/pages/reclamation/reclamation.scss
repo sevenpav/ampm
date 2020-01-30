@@ -30,6 +30,32 @@
   flex-grow: 1;
 }
 
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+  .reclamation-pg__container {
+    flex-direction: column;
+
+    > * {
+      max-width: none;
+    }
+  }
+
+  .reclamayion-pg__l-side {
+    margin-right: 0;
+    margin-bottom: 28px;
+  }
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
 // Mixes
 
 .reclamation-pg__page-title {

@@ -44,6 +44,31 @@
   }
 }
 
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+  .sales-analytics-pg__app-tabs {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .sales-analytics-pg__app-tab {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}
+
+@include less-sm {
+}
+
 // Mixes
 
 .sales-analytics-pg__page-title {

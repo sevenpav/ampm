@@ -74,7 +74,7 @@
 
 .table__footer {
   display: flex;
-  margin-top: 14px;
+  margin-top: 8px;
 }
 
 .table__pagination {
@@ -154,6 +154,19 @@
 }
 
 @include less-sm {
+  .table__footer {
+    flex-direction: column;
+  }
+
+  .table__select-output {
+    align-self: flex-end;
+    margin-bottom: 16px;
+  }
+
+  .table__pagination {
+    align-self: center;
+    margin-left: 0;
+  }
 }
 
 // Mixes

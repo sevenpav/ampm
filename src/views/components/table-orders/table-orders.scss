@@ -11,36 +11,38 @@
 
 .table-orders__filter {
   display: flex;
-}
-
-.table-orders__tabs {
+  align-items: center;
   margin-bottom: 22px;
-  background: #fff;
-  border-radius: 22px;
 }
 
-.table-orders__tab {
-  padding: 14px 16px;
-  color: #000;
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: 0.25px;
-  text-transform: uppercase;
-  border-radius: 22px;
+// .table-orders__tabs {
+//   margin-bottom: 22px;
+//   background: #fff;
+//   border-radius: 22px;
+// }
 
-  &:not(:last-child) {
-    margin-right: 16px;
-  }
+// .table-orders__tab {
+//   padding: 14px 16px;
+//   color: #000;
+//   font-size: 12px;
+//   line-height: 1;
+//   letter-spacing: 0.25px;
+//   text-transform: uppercase;
+//   border-radius: 22px;
 
-  &:not(.table-orders__tab--active):hover {
-    background: lighten(#515159, 60%);
-  }
+//   &:not(:last-child) {
+//     margin-right: 16px;
+//   }
 
-  &--active {
-    color: #fff;
-    background: #515159;
-  }
-}
+//   &:not(.table-orders__tab--active):hover {
+//     background: lighten(#515159, 60%);
+//   }
+
+//   &--active {
+//     color: #fff;
+//     background: #515159;
+//   }
+// }
 
 .table.table-orders__self {
 }
@@ -60,6 +62,14 @@
 }
 
 @include less-md {
+  .table-orders__filter {
+    flex-direction: column;
+  }
+
+  .table-orders__tags {
+    order: 1;
+    margin-top: 16px;
+  }
 }
 
 @include less-sm {

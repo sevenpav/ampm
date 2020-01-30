@@ -14,18 +14,18 @@ mixin table({ thead, tbody, withPagination }, mixes)
               each td in tbody
                 td!= td
 
-      if (withPagination)
-      
-        footer.table__footer
-          .table__select-output
-            each val, idx in [10, 25, 50]
-              button.table__select-val(class=(idx === 0) && 'table__select-val--active')= val
+    if (withPagination)
+    
+      footer.table__footer
+        .table__select-output
+          each val, idx in [10, 25, 50]
+            button.table__select-val(class=(idx === 0) && 'table__select-val--active')= val
 
-          .table__pagination
-            button.table__btn-prev
-              img.table__icon-arrow(src=require('views/components/table/img/i-arrow.svg') alt='Иконка')
-            .table__pagination-list
-              each val, idx in [1, 2, 3, 4, 5]
-                button.table__btn-page(class=(idx === 0) && 'table__btn-page--active')= val
-            button.table__btn-next
-              img.table__icon-arrow(src=require('views/components/table/img/i-arrow.svg') alt='Иконка')
+        .table__pagination
+          button.table__btn-prev
+            img.table__icon-arrow(src=require('views/components/table/img/i-arrow.svg') alt='Иконка')
+          .table__pagination-list
+            each val, idx in [1, 2, 3, 4, 5]
+              button.table__btn-page(class=(idx === 0) && 'table__btn-page--active')= val
+          button.table__btn-next
+            img.table__icon-arrow(src=require('views/components/table/img/i-arrow.svg') alt='Иконка')
