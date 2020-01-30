@@ -15,7 +15,6 @@ $(() => {
 
   let candidate = null
   let positionCounter = 1
-  let voiceCounter = 0
 
   const addPosition = () => {
     const tepmlate = newPosition.content.cloneNode(true)
