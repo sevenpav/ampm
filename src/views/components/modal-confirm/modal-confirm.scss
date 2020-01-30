@@ -35,9 +35,23 @@
 }
 
 @include less-md {
+  .modal-confirm {
+    width: 100vw;
+    max-width: calc(100vw - 64px);
+  }
 }
 
 @include less-sm {
+  .modal-confirm__footer-btn-group {
+    flex-direction: column;
+
+    > * {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+    }
+  }
 }
 
 // Mixes

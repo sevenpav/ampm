@@ -73,6 +73,11 @@
 }
 
 @include less-sm {
+  .new-reclamation-app__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .new-reclamation-app__radio-btns {
     flex-direction: column;
     align-items: flex-start;
@@ -100,6 +105,20 @@
     margin-bottom: 16px;
 
     .select__self-wrap {
+      width: 100%;
+    }
+  }
+}
+
+.new-reclamation-pg__page-title {
+  @include less-sm {
+    margin-bottom: 16px;
+  }
+}
+
+.new-reclamation-app__header {
+  .new-reclamation-app__btn-normal {
+    @include less-sm {
       width: 100%;
     }
   }
