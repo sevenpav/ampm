@@ -1,8 +1,14 @@
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  margin-right: -16px;
   margin-bottom: -16px;
+
+  > * {
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
 }
 
 // Media queries
@@ -23,7 +29,6 @@
 
 .product-item {
   max-width: 273px;
-  margin-bottom: 16px;
 }
 
 // Animation

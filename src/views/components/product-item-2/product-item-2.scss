@@ -27,12 +27,14 @@
 }
 
 .product-item-2__img-container {
-  max-height: 200px;
+  height: 200px;
   margin-bottom: 10px;
+  @include flex-center;
 }
 
 .product-item-2__img {
-  @include img-resp;
+  height: auto;
+  max-height: 100%;
 }
 
 .product-item-2__collection-name {

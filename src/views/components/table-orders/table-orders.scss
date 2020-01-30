@@ -80,9 +80,23 @@
 .table-orders__select {
   margin-left: auto;
 
+  @include less-md {
+    align-self: flex-start;
+    margin-left: 0;
+  }
+
+  @include less-sm {
+    width: 100%;
+  }
+
   .select__self-wrap {
     width: 100vw;
     max-width: 273px;
+
+    @include less-sm {
+      width: 100%;
+      max-width: none;
+    }
   }
 }
 

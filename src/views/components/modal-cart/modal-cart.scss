@@ -1,11 +1,19 @@
 .modal-cart {
   width: 100%;
   max-width: 755px;
+
+  .modal__header {
+    margin-bottom: 24px;
+  }
+
+  .modal-cart__footer {
+    margin-top: 24px;
+  }
 }
 
 .modal-cart__list {
-  margin-top: 65px;
-  margin-bottom: 50px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .modal-cart__footer-btn-group {
@@ -29,6 +37,9 @@
 }
 
 @include less-sm {
+  .modal-cart__footer-btn-group {
+    flex-direction: column;
+  }
 }
 
 // Mixes
@@ -36,6 +47,11 @@
 .modal-cart__btn-normal {
   &:not(:last-child) {
     margin-right: 33px;
+
+    @include less-sm {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
   }
 }
 

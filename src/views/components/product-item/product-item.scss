@@ -6,13 +6,16 @@
 }
 
 .product-item__img-container {
-  max-height: 140px;
+  height: 140px;
   margin-bottom: 11px;
   overflow: hidden;
   @include flex-center;
 }
 
 .product-item__img {
+  height: auto;
+  max-height: 100%;
+
   @include img-resp;
 }
 
