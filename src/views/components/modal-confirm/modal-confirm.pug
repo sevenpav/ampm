@@ -1,0 +1,20 @@
+mixin modal-confirm({ title }, mixes)
+
+  .modal.modal-confirm(class=(mixes) && `${mixes}__modal-confirm`)
+    header.modal__header
+      .modal__title-group
+        img.modal__header-icon(src=require('views/components/modal-confirm/img/icon.svg') alt='Иконка')
+        p.modal__title= title
+
+      +btn-close({}, 'modal')
+
+    .modal-confirm__body
+      p.modal-confirm__text Вы точно хотите удалить позицию?
+        
+    footer.modal-confirm__footer
+      .modal-confirm__footer-btn-group
+        +btn-normal({ label: 'Удалить', type: 'outline', otherClass: '_deletePosition' }, 'modal-confirm')
+        +btn-normal({ label: 'Отменить', type: 'gray', otherClass: '_closeModal' }, 'modal-confirm')
+
+        
+

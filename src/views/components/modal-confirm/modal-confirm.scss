@@ -1,0 +1,45 @@
+.modal-confirm {
+  width: 100%;
+  max-width: 563px;
+}
+
+.modal-confirm__body {
+  margin: 40px 0 44px;
+  text-align: center;
+}
+
+.modal-confirm__text {
+  color: #000;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.444444px;
+}
+
+.modal-confirm__footer-btn-group {
+  display: flex;
+  justify-content: center;
+
+  > * {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+// Media queries
+
+@include less-xl {
+}
+
+@include less-lg {
+}
+
+@include less-md {
+}
+
+@include less-sm {
+}
+
+// Mixes
+
+// Animation

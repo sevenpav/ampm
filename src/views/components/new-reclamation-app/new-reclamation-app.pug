@@ -1,6 +1,7 @@
 mixin new-reclamation-app(mixes)
 
   .new-reclamation-app(class=(mixes) && `${mixes}__new-reclamation-app`)
+    +modal-confirm({ title: 'Удалить рекламацию' }, 'new-reclamation-pg')
 
     header.new-reclamation-app__header
       +page-title({ title: 'Новая рекламация' }, 'new-reclamation-pg')
@@ -19,9 +20,9 @@ mixin new-reclamation-app(mixes)
               +textarea({ placeholder: 'Название продукта', type: 'bg' }, 'new-reclamation-app')
               +input-file({ placeholder: 'Фотография', type: 'bg' }, 'new-reclamation-app')
             
-              +btn-normal({ label: '+  Добавить позицию', type: 'outline' }, 'new-reclamation-app')
+              +btn-normal({ label: '+  Добавить позицию', type: 'outline', otherClass: '_addPosition' }, 'new-reclamation-app')
 
-            
+        
 
       .layout-app-2__r-side
         .layout-app-2__display
@@ -37,3 +38,14 @@ mixin new-reclamation-app(mixes)
                   +radio-btn({ label: 'На складе дилера', isChecked: true }, 'new-reclamation-app')
                   +radio-btn({ label: 'У конечного потребителя' }, 'new-reclamation-app')
 
+      template#newPosition
+        .content-display
+          header.content-display__header
+            +btn-close({}, 'new-reclamation-app')
+          .new-reclamation-app__nomenclature
+            +input-text({ placeholder: 'Название продукта', type: 'bg' }, 'new-reclamation-app')
+            +textarea({ placeholder: 'Название продукта', type: 'bg' }, 'new-reclamation-app')
+            +textarea({ placeholder: 'Название продукта', type: 'bg' }, 'new-reclamation-app')
+            +input-file({ placeholder: 'Фотография', type: 'bg' }, 'new-reclamation-app')
+          
+            +btn-normal({ label: '+  Добавить позицию', type: 'outline', otherClass: '_addPosition' }, 'new-reclamation-app')

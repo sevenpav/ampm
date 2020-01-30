@@ -1,4 +1,11 @@
 .new-reclamation-app {
+  .layout-app-2__l-side {
+    .content-display {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
 }
 
 .new-reclamation-app__header {
