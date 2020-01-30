@@ -3,6 +3,10 @@
     .content-display {
       &:not(:last-child) {
         margin-bottom: 16px;
+
+        .btn-normal {
+          display: none;
+        }
       }
     }
   }

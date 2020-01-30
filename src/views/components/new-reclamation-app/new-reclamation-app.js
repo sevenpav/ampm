@@ -47,8 +47,6 @@ $(() => {
 
       synth.speak(utterThis)
 
-      voiceCounter++
-
       return
     }
 
