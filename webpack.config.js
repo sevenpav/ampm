@@ -175,8 +175,8 @@ const config = {
   plugins: [
     ...instance,
     // new HtmlWebpackPlugin({
-    //   template: 'views/pages/new-reclamation/new-reclamation.pug',
-    //   filename: 'new-reclamation.html',
+    //   template: 'views/pages/set/set.pug',
+    //   filename: 'set.html',
     //   chunks: ['bundle', 'catalog'],
     //   minify: !isDev
     // }),

@@ -11,6 +11,45 @@ mixin product-char(mixes)
             p.product-char__title ЭМОЦИОНАЛЬНЫЙ
             p.product-char__text Gem – это трендовые продукты для ванной комнаты по доступной цене, разработанные инновационной студией DanelonMeroni. Во главе агентства стоят учредители Клаудия Данелон и Федерико Мерони. Они используют свой опыт в архитектуре, интерьерном, промышленном дизайне и брендинге для создания ультрамодных и функциональных продуктов. Со дня основания студии продукты от DanelonMeroni традиционно появляются на международных европейских выставках и не сходят со страниц дизайнерских журналов.
     
-    button.product-char__btn-show-more ПОКАЗАТЬ ВСЕ ХАРАКТЕРИСТИКИ
-      img.product-char__btn-icon(src=require('views/components/product-char/img/i-arrow.svg') alt='Иконка')
+    .product-char__all
+      button.product-char__btn-show-more <span>ПОКАЗАТЬ</span>&nbsp;ВСЕ ХАРАКТЕРИСТИКИ
+        img.product-char__btn-icon(src=require('views/components/product-char/img/i-arrow.svg') alt='Иконка')
+      
+      .product-char__all-container
+        .product-char__all-group
+          p.product-char__all-subtitle Данные об изделии
+          .product-char__all-items
+            each item in [1, 2, 3, 4, 5]
+              .product-chat__all-item
+                p.product-chat__all-char-name Ширина изделия(мм)
+                p.product-chat__all-char-val 245
+
+
+        .product-char__all-group
+          p.product-char__all-subtitle Функции и оснащение
+          .product-char__all-items
+            each item in [1, 2]
+              .product-chat__all-item
+                p.product-chat__all-char-name Тип управления
+                p.product-chat__all-char-val Однозахватный
+  
+                
+        .product-char__all-group
+          p.product-char__all-subtitle Комплектация
+          .product-char__all-items
+            each item in [1]
+              .product-chat__all-item
+                p.product-chat__all-char-name Эксцентрики
+                p.product-chat__all-char-val В комплекте
+                
+        .product-char__all-group
+          p.product-char__all-subtitle Внешнее исполнение
+          .product-char__all-items
+            each item in [1]
+              .product-chat__all-item
+                p.product-chat__all-char-name Декоративные части
+                p.product-chat__all-char-val Металлические декоративные чашки
+                
+
+
 

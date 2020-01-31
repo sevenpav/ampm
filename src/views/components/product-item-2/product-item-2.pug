@@ -2,11 +2,11 @@ mixin product-item-2(mixes)
 
   .product-item-2(class=(mixes) && `${mixes}__product-item-2`)
     span.product-item-2__sale -23%
-    .product-item-2__img-container
+    a.product-item-2__img-container(href='#')
       img.product-item-2__img(src=require('views/components/product-item-2/img/item.png') alt='Изображение')
     
     p.product-item-2__collection-name LIKE
-    p.product-item-2__name Унитаз-компакт с быстросъемным сиденьем с микролифтом, горизонтальный выход
+    a.product-item-2__name(href='#') Унитаз-компакт с быстросъемным сиденьем с микролифтом, горизонтальный выход
     p.product-item-2__rest-items На складе 20 шт.
     .product-item-2__price-group
       p.product-item-2__oldprice 17 590 ₽

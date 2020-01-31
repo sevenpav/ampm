@@ -3,11 +3,11 @@ mixin product-item({ item, type }, mixes)
   .product-item(class=(mixes) && `${mixes}__product-item`)
 
 
-    .product-item__img-container
+    a.product-item__img-container(href='#')
       img.product-item__img(src=`${item.img}` alt='Изображение')
     
     p.product-item__num= item.num
-    p.product-item__name= item.name
+    a.product-item__name(href='#')= item.name
     .product-item__price-group
       p.product-item__oldPrice= item.oldPrice
       p.product-item__price= item.price

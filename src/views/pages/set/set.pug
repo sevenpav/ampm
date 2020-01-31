@@ -1,0 +1,23 @@
+extends ~@/layout
+
+block title
+  title
+
+block float-content
+
+  - const data = require('./data.js')
+
+  #set-pg
+    .container
+      +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'set-pg')
+
+      +product-d('set-pg')
+
+      +set-slider('set-pg')
+
+    +adv-list('set-pg')
+
+    .container
+      +product-char('set-pg')
+
+    +product-download('set-pg')

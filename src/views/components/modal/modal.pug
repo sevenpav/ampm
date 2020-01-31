@@ -1,4 +1,9 @@
-mixin modal(mixes)
+mixin modal({ otherClass }, mixes)
 
-  .modal(class=(mixes) && `${mixes}__modal`)
+  .modal(class=(mixes) && `${mixes}__modal` class=(otherClass) && `${otherClass}`)
+    header.modal__header
+      .modal__title-group
+        p.modal__title Схема
+
+      +btn-close({}, 'modal')
 

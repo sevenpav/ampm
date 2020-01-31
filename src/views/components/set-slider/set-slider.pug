@@ -1,0 +1,26 @@
+mixin set-slider(mixes)
+
+  .set-slider(class=(mixes) && `${mixes}__set-slider`)
+    p.set-slider__title Составляющие комплекта
+      .set-slider__container.swiper-container
+        .set-slider__wrap.swiper-wrapper
+          each item, idx in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            .set-slider__slide.swiper-slide(class=(idx === 2) && 'set-slider__slide--inset' data-inSet=(idx === 2) ? 'true' : '')
+              a.set-slider__img-container(href='#')
+                img.set-slider__img(src=require('views/components/set-slider/img/item.png') alt='Изображение')
+              
+              p.set-slider__collection-name GEM
+              a.set-slider__name(href='#') Раковина мебельная, керамическая, 60 см.
+              p.set-slider__rest-items На складе 20 шт.
+              .set-slider__price-group
+                p.set-slider__oldprice 17 590 ₽
+                p.set-slider__price 13 490 ₽
+              
+              +btn-normal({ label: idx === 2 ? 'Убрать из комплекта' : 'Добавить в комплект', type: 'outline' }, 'set-slider')
+
+    .set-slider__counter-group
+      p.set-slider__counter <span class='_selected'>1</span> из <span class='_all'>11</span> товаров выбран
+
+    ul.set-slider__pagination
+      each item, idx in [1, 2, 3]
+        li.set-slider__pagination-val(class=(idx === 0) && 'set-slider__pagination-val--active')

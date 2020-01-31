@@ -1,25 +1,33 @@
 .adv-list {
+  display: flex;
+  justify-content: center;
   padding: 64px 0;
   background: #e1e5ef;
 }
 
 .adv-list__self {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
   @include container;
+}
+
+.adv-list__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: -16px;
+  margin-bottom: -16px;
 }
 
 .adv-list__item {
   width: 100%;
   max-width: 273px;
   min-height: 280px;
+  margin-right: 16px;
+  margin-bottom: 16px;
   padding: 0 10px;
   background: #fff;
   border-radius: 12px;
-
-  &:not(:last-child) {
-    margin-right: 16px;
-  }
 }
 
 .adv-list__icon-container {

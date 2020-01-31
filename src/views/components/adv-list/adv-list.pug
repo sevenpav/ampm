@@ -1,11 +1,12 @@
 mixin adv-list(mixes)
 
   .adv-list(class=(mixes) && `${mixes}__adv-list`)
-    ul.adv-list__self
-      each icon in [require('views/components/adv-list/img/i-1.png'), require('views/components/adv-list/img/i-2.png'), require('views/components/adv-list/img/i-3.png'), require('views/components/adv-list/img/i-4.png')]
-        li.adv-list__item
-          .adv-list__icon-container
-            img.adv-list__icon(src=`${icon}`)
+    .adv-list__self
+      .adv-list__wrap
+        each icon in [require('views/components/adv-list/img/i-1.png'), require('views/components/adv-list/img/i-2.png'), require('views/components/adv-list/img/i-3.png'), require('views/components/adv-list/img/i-4.png')]
+          .adv-list__item
+            .adv-list__icon-container
+              img.adv-list__icon(src=`${icon}`)
 
-          p.adv-list__name Гарантия 3 года
+            p.adv-list__name Гарантия 3 года
 
