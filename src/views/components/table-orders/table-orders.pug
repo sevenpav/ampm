@@ -1,4 +1,4 @@
-mixin table-orders(mixes)
+mixin table-orders({ withSeller }, mixes)
 
   - const { tabs, table } = require('views/components/table-orders/data.js')
 
@@ -11,8 +11,8 @@ mixin table-orders(mixes)
         //- .table-orders__tabs
         //-   each tab, idx in tabs
         //-     button.table-orders__tab(class=(idx === 0 && 'table-orders__tab--active'))= tab
-        
-        +select({ items: ['Продавец', 'Сергей Епифанцев'] }, 'table-orders')
+        if(withSeller)
+          +select({ items: ['Продавец', 'Сергей Епифанцев'] }, 'table-orders')
 
     .table
       .table__scroll-wrap
