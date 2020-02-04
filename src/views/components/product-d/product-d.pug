@@ -2,13 +2,14 @@ mixin product-d(mixes)
 
   .product-d(class=(mixes) && `${mixes}__product-d`)
     .product-d__img-side
-      .product-d__img-container
-        img.product-d__img(src=require('views/components/product-d/img/item.png') alt='Изображение')
-      .product-d__sub-slider.swiper-container
-        .product-d__sub-slider-wrap.swiper-wrapper
+      .product-d__slider.swiper-container
+        .product-d__slider-wrap.swiper-wrapper
+          each slide in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            .product-d__slider-slide.swiper-slide(style=`background-image: url("${require('views/components/product-d/img/item.png')}")`)
+      .product-d__thumb.swiper-container
+        .product-d__thumb-wrap.swiper-wrapper
           each slide in [1, 2, 3, 4 ,5 ,6, 7, 8, 9, 10]
-            .product-d__sub-slider-slide.swiper-slide(data-img=require('views/components/product-d/img/subitem-big.png'))
-              img.product-d__sub-slider-img(src=require('views/components/product-d/img/subitem.png') alt='Изображение')
+            .product-d__thumb-slide.swiper-slide(style=`background-image: url("${require('views/components/product-d/img/subitem-big.png')}")`)
 
     .product-d__info-side
       .product-d__title-group

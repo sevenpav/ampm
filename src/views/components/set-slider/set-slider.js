@@ -10,6 +10,15 @@ $(() => {
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 16,
+    pagination: {
+      el: '.set-slider__pagination',
+      clickable: true,
+      bulletClass: 'set-slider__pagination-item',
+      bulletActiveClass: 'set-slider__pagination-item--active',
+      renderBullet: function(index, className) {
+        return `<li class="set-slider__pagination-item ${className}"><span></span></li>`
+      }
+    },
     breakpoints: {
       991.98: {
         slidesPerView: 4,
@@ -26,7 +35,9 @@ $(() => {
     }
   })
 
-  slider.on('slideChange', () => {})
+  slider.on('slide', () => {
+    slider.activeIndex
+  })
 
   const $slide = $('.set-slider__slide', $slider)
   const $btn = $('.btn-normal', $slide)

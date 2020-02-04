@@ -173,13 +173,13 @@ const config = {
     ]
   },
   plugins: [
-    ...instance,
-    // new HtmlWebpackPlugin({
-    //   template: 'views/pages/set/set.pug',
-    //   filename: 'set.html',
-    //   chunks: ['bundle', 'catalog'],
-    //   minify: !isDev
-    // }),
+    // ...instance,
+    new HtmlWebpackPlugin({
+      template: 'views/pages/instructions/instructions.pug',
+      filename: 'instructions.html',
+      chunks: ['bundle', 'instructions'],
+      minify: !isDev
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery'
     }),

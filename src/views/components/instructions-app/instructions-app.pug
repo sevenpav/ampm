@@ -1,0 +1,23 @@
+mixin instructions-app(mixes)
+
+  - const { listItems } = require('views/components/instructions-app/data.js')
+
+  .instructions-app(class=(mixes) && `${mixes}__instructions-app`)
+
+    sidebar.instructions-app__sidebar
+      .instructions-app__tab-switch
+        each item in listItems
+          button.instructions-app__tab-btn(data-target=item)= item
+
+      +btn-normal({ label: 'О приложении', type: 'gray', otherClass: '_tabBtn', target: 'О приложении' }, 'instructions-app')
+
+
+    .instructions-app__tabs-container
+      each item, idx in [...listItems, 'О приложении']
+        .instructions-app__tab(class=(idx === listItems.length) && 'instructions-app__tab--show', data-target=item)
+          p.instructions-app__tab-title= item
+          p.instructions-app__tab-text Реопексия перемещает гончарный дренаж, что лишний раз подтверждает правоту Докучаева. Альбедо, как следствие уникальности почвообразования в данных условиях, возникает биокосный псевдомицелий. Усадка охлаждает фраджипэн. Окисление растворяет органо-минеральный краснозём, вне зависимости от предсказаний теоретической модели явления.
+          .instructions-app__tab-img-group
+            each img in [require('views/components/instructions-app/img/item-1.png'), require('views/components/instructions-app/img/item-2.png'), require('views/components/instructions-app/img/item-3.png')]
+              .instructions-app__tab-img-container
+                img.instructions-app__tab-img(src=img alt='Изображение')

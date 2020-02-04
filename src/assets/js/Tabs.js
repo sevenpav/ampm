@@ -4,6 +4,7 @@ class Tabs {
     $tabs,
     tabs,
     activeClass,
+    notUseActiveClass,
     targetClass,
     targetActiveClass
   }) {
@@ -11,6 +12,7 @@ class Tabs {
     this.$tabs = $tabs ? $tabs : $(`.${tabs}`, this.$parent)
     this.$target = $(`.${targetClass}`, this.$parent)
     this.activeClass = activeClass ? activeClass : `${tabs}--active`
+    this.notUseActiveClass = notUseActiveClass ? true : false
     this.showClass = `${targetClass}--show`
     this.$targetActiveClass = targetActiveClass
       ? $(`.${targetActiveClass}`, this.$parent)
@@ -18,7 +20,14 @@ class Tabs {
   }
 
   init() {
-    const { $tabs, $target, activeClass, showClass, $targetActiveClass } = this
+    const {
+      $tabs,
+      $target,
+      activeClass,
+      notUseActiveClass,
+      showClass,
+      $targetActiveClass
+    } = this
 
     $tabs.click(function() {
       const $self = $(this)
@@ -27,9 +36,11 @@ class Tabs {
       if (!$self.hasClass(activeClass)) {
         $targetActiveClass.filter(`.${activeClass}`).removeClass(activeClass)
 
-        $targetActiveClass
-          .filter(`[data-target="${target}"]`)
-          .addClass(activeClass)
+        if (!notUseActiveClass) {
+          $targetActiveClass
+            .filter(`[data-target="${target}"]`)
+            .addClass(activeClass)
+        }
 
         $target.filter(`.${showClass}`).removeClass(showClass)
 

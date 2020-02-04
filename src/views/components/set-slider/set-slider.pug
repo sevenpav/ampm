@@ -23,4 +23,5 @@ mixin set-slider(mixes)
 
     ul.set-slider__pagination
       each item, idx in [1, 2, 3]
-        li.set-slider__pagination-val(class=(idx === 0) && 'set-slider__pagination-val--active')
+        li.set-slider__pagination-item(class=(idx === 0) && 'set-slider__pagination-item--active')
+          span

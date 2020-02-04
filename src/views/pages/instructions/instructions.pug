@@ -1,0 +1,16 @@
+extends ~@/layout
+
+block title
+  title
+
+block content
+
+  - const data = require('./data.js')
+
+  #instructions-pg
+    +breadcrumbs({ items: ['Каталог', 'Мебель', 'Комплекты'] }, 'instructions-pg')
+    +page-title({ title: 'Инструкции', type: 'line' }, 'instructions-pg')
+
+    +instructions-app('instructions-pg')
+
+

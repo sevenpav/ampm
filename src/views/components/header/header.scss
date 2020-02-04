@@ -162,9 +162,6 @@
   letter-spacing: 0.4px;
 }
 
-.header__profile-name {
-}
-
 .header__profile-icon-more {
   margin-left: 6px;
 }
@@ -202,9 +199,6 @@
   line-height: 1;
   letter-spacing: 0.4px;
   @include flex-center;
-}
-
-.header__login-icon {
 }
 
 .header__login-label {
@@ -363,12 +357,6 @@
 }
 
 // Mixes
-
-.header__bar {
-  .header__search {
-    // margin: 0 auto;
-  }
-}
 
 .header__search {
   position: relative;
